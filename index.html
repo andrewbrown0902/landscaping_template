@@ -1,525 +1,818 @@
 <!DOCTYPE html>
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Indy Landscapers | Premium Outdoor Living</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#13ec5b",
-                        "background-light": "#f6f8f6",
-                        "background-dark": "#102216",
-                        "slate-custom": "#1e293b",
-                    },
-                    fontFamily: {
-                        "display": ["Manrope", "sans-serif"]
-                    },
-                    borderRadius: {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
-                    },
-                },
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>[Company Name] | Landscaping & Hardscaping in [City, State]</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#13ec5b",
+              "background-light": "#f6f8f6",
+              "background-dark": "#102216",
+              "slate-custom": "#1e293b",
             },
-        }
+            fontFamily: {
+              display: ["Manrope", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
     </script>
-<style>
-        body { font-family: 'Manrope', sans-serif; }
-        .service-card:hover .service-img { transform: scale(1.05); }
+    <style>
+      body {
+        font-family: "Manrope", sans-serif;
+      }
+      .service-card:hover .service-img {
+        transform: scale(1.05);
+      }
     </style>
-</head>
-<body class="bg-background-light dark:bg-background-dark text-slate-custom dark:text-gray-100 font-display">
-<header class="sticky top-0 z-50 w-full bg-white/90 dark:bg-background-dark/90 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800">
-<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-<div class="flex items-center gap-2">
-<div class="size-8 text-primary">
-<svg fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-<path d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z"></path>
-</svg>
-</div>
-<span class="text-xl font-extrabold tracking-tight">INDY LANDSCAPERS</span>
-</div>
-<nav class="hidden md:flex items-center gap-8">
-<a class="text-sm font-semibold hover:text-primary transition-colors" href="#services">Services</a>
-<a class="text-sm font-semibold hover:text-primary transition-colors" href="#about">About</a>
-<a class="text-sm font-semibold hover:text-primary transition-colors" href="#why-us">Why Us</a>
-<a class="text-sm font-semibold hover:text-primary transition-colors" href="#process">Process</a>
-<a class="flex items-center gap-2 bg-primary text-background-dark px-5 py-2.5 rounded-lg font-bold hover:brightness-105 transition-all" href="tel:8888888888">
-<span class="material-symbols-outlined text-lg">call</span>
-                888-888-8888
-            </a>
-</nav>
-</div>
-</header>
-<section class="relative overflow-hidden pt-12 pb-20 px-6 lg:px-0">
-<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-<div class="space-y-8">
-<div>
-<span class="inline-block py-1 px-3 bg-primary/20 text-primary text-xs font-bold uppercase tracking-widest rounded mb-4">Indianapolis' Premier Landscape Designers</span>
-<h1 class="text-5xl lg:text-7xl font-black leading-tight tracking-tight dark:text-white">
-                    Transform Your <span class="text-primary">Outdoor</span> Living Space
-                </h1>
-<p class="mt-6 text-lg text-gray-600 dark:text-gray-400 max-w-lg leading-relaxed">
-                    Licensed, Insured, and Certified professionals dedicated to elite outdoor craftsmanship. We turn ordinary yards into extraordinary retreats.
-                </p>
-</div>
-<div class="flex flex-wrap gap-6 items-center">
-<div class="flex items-center gap-1 text-yellow-500">
-<span class="material-symbols-outlined fill-1">star</span>
-<span class="material-symbols-outlined fill-1">star</span>
-<span class="material-symbols-outlined fill-1">star</span>
-<span class="material-symbols-outlined fill-1">star</span>
-<span class="material-symbols-outlined fill-1">star</span>
-<span class="ml-2 text-slate-custom dark:text-gray-300 font-bold">5.0 Rating</span>
-</div>
-<div class="h-4 w-px bg-gray-300"></div>
-<div class="flex items-center gap-2 text-sm font-semibold text-gray-500">
-<span class="material-symbols-outlined text-primary">verified</span> Licensed &amp; Insured
-                </div>
-</div>
-<div class="flex flex-wrap gap-4">
-<a class="bg-primary text-background-dark px-8 py-4 rounded-xl font-bold text-lg hover:shadow-lg hover:shadow-primary/20 transition-all" href="#quote">Get a Free Quote</a>
-<a class="bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 px-8 py-4 rounded-xl font-bold text-lg flex items-center gap-2" href="tel:8888888888">
-<span class="material-symbols-outlined">call</span> Call Now
-                </a>
-</div>
-</div>
-<div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-2xl border border-gray-100 dark:border-gray-700" id="quote">
-<h3 class="text-2xl font-bold mb-2">Request an Estimate</h3>
-<p class="text-gray-500 dark:text-gray-400 mb-6 text-sm">Fill out the form below and we'll contact you within 24 hours.</p>
-<form class="space-y-4">
-<input class="w-full bg-gray-50 dark:bg-gray-900 border-gray-200 dark:border-gray-700 rounded-lg p-3 text-sm focus:ring-primary focus:border-primary" placeholder="Full Name" type="text"/>
-<div class="grid grid-cols-2 gap-4">
-<input class="bg-gray-50 dark:bg-gray-900 border-gray-200 dark:border-gray-700 rounded-lg p-3 text-sm focus:ring-primary focus:border-primary" placeholder="Email Address" type="email"/>
-<input class="bg-gray-50 dark:bg-gray-900 border-gray-200 dark:border-gray-700 rounded-lg p-3 text-sm focus:ring-primary focus:border-primary" placeholder="Phone Number" type="tel"/>
-</div>
-<select class="w-full bg-gray-50 dark:bg-gray-900 border-gray-200 dark:border-gray-700 rounded-lg p-3 text-sm focus:ring-primary focus:border-primary">
-<option>Interested Service</option>
-<option>Hardscaping</option>
-<option>Lawn Care</option>
-<option>Outdoor Lighting</option>
-<option>Other</option>
-</select>
-<textarea class="w-full bg-gray-50 dark:bg-gray-900 border-gray-200 dark:border-gray-700 rounded-lg p-3 text-sm focus:ring-primary focus:border-primary" placeholder="Project Details" rows="3"></textarea>
-<button class="w-full bg-primary text-background-dark font-black py-4 rounded-lg uppercase tracking-wider hover:brightness-105 transition-all">Submit Request</button>
-<p class="text-center text-[10px] text-gray-400 mt-2 italic">Privacy Guaranteed. No Spam, Ever.</p>
-</form>
-</div>
-</div>
-</section>
-<section class="bg-slate-custom py-10">
-<div class="max-w-7xl mx-auto px-6 flex flex-wrap justify-around items-center gap-10">
-<div class="flex items-center gap-3 text-white">
-<div class="bg-white/10 p-2 rounded-lg">
-<span class="material-symbols-outlined text-primary text-3xl">reviews</span>
-</div>
-<div>
-<p class="text-2xl font-bold">450+</p>
-<p class="text-xs text-gray-400 uppercase tracking-widest">Google Reviews</p>
-</div>
-</div>
-<div class="flex items-center gap-3 text-white">
-<div class="bg-white/10 p-2 rounded-lg">
-<span class="material-symbols-outlined text-primary text-3xl">task_alt</span>
-</div>
-<div>
-<p class="text-2xl font-bold">500+</p>
-<p class="text-xs text-gray-400 uppercase tracking-widest">Jobs Completed</p>
-</div>
-</div>
-<div class="flex items-center gap-8 opacity-50 filter grayscale invert contrast-200">
-<span class="material-symbols-outlined text-4xl">eco</span>
-<span class="material-symbols-outlined text-4xl">landscape</span>
-<span class="material-symbols-outlined text-4xl">home_work</span>
-<span class="material-symbols-outlined text-4xl">architecture</span>
-</div>
-</div>
-</section>
-<section class="py-24 px-6" id="services">
-<div class="max-w-7xl mx-auto">
-<div class="text-center mb-16">
-<h2 class="text-4xl font-black mb-4">Our Premium Services</h2>
-<div class="h-1.5 w-24 bg-primary mx-auto rounded-full"></div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<div class="service-card group relative overflow-hidden rounded-2xl bg-white dark:bg-gray-800 shadow-xl border border-gray-100 dark:border-gray-700 transition-all">
-<div class="h-64 overflow-hidden">
-<div class="service-img h-full w-full bg-cover bg-center transition-transform duration-500" data-alt="high end backyard stone patio design" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBnSNrORjCtEG_KgSjzSq4Ldh-JmRzzzGGKhJWlMPGAiMcSbZZlw6EgIaXZc_yuBced4HHjkd-ZGpVi2r6JJ5hJXQup2dAqqvNaN01tlKf-fHJ8BQftuXvCKUH9XTZVcGS-J0eFdgAJ4iSVzyg9affEEZnGRn7eG1_JaCwyJC1T0BMz_AOAZa8o3omgxscTeZouiLpXzlSRXHU8YhZsUIezsZGEDa8HgpGAb9UOTjTRlmejtQd3Ld0NzMFcgfyTLi41lgSrzofBn_bD');"></div>
-</div>
-<div class="p-6">
-<h3 class="text-xl font-bold mb-2">Hardscaping</h3>
-<p class="text-gray-500 text-sm leading-relaxed">Custom stone patios, retaining walls, and walkways built to last generations.</p>
-</div>
-</div>
-<div class="service-card group relative overflow-hidden rounded-2xl bg-white dark:bg-gray-800 shadow-xl border border-gray-100 dark:border-gray-700 transition-all">
-<div class="h-64 overflow-hidden">
-<div class="service-img h-full w-full bg-cover bg-center transition-transform duration-500" data-alt="perfectly manicured green luxury lawn" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuANJ5tyspgcYuUwDsCzADtk1L9iBZdAxwz5-FB6vzwhtJllI-dcbeG78c2st8dHsCv8EtoQgeo01C92vpCL8V5MlRxcm5wmaqqiTSsDFqmPURtRZ7zxRH9wZWu3WuuXpsRtxWj3wJHb9BMG22gpEX90RIzYjQO3vjWzRuaOm6msjcJpi4Q0PwYZz72v3xaDgVIZ0_zvTlU-kENtR-SUF9iOk4khyIA1qyMM1s5mcmzXLpt9TWL1EqwT2vN7OpRbgvgPmGVNj7gHSCE2');"></div>
-</div>
-<div class="p-6">
-<h3 class="text-xl font-bold mb-2">Lawn Care</h3>
-<p class="text-gray-500 text-sm leading-relaxed">Elite fertilization, weed control, and precision mowing for a golf-course finish.</p>
-</div>
-</div>
-<div class="service-card group relative overflow-hidden rounded-2xl bg-white dark:bg-gray-800 shadow-xl border border-gray-100 dark:border-gray-700 transition-all">
-<div class="h-64 overflow-hidden">
-<div class="service-img h-full w-full bg-cover bg-center transition-transform duration-500" data-alt="elegant outdoor landscape lighting at night" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA1XWdn4PmGy1GxcpLaj4WCMKZ-rb6m03oL5wGG51i4FDvmEVcTBd05Asga6Xy30z4YzhR7k4wpGf9f363QefHThZoEMJGAC4VvaH7vwdL_wsRE3hHE4fHkMnlTrSMGHehnYwLUh9uiUd3PVEIzhpLIbtWEJKj_6hFmoaLJzGzhOVZT5x6kC2eSdYvBT-QtzI9K9eeqP0p8aABNPZDUmDI3bVFBjd--gg4ho8WA0QKj69UEsn0ETx50YT9bNJlv-6wV47SRbAOFjDdK');"></div>
-</div>
-<div class="p-6">
-<h3 class="text-xl font-bold mb-2">Outdoor Lighting</h3>
-<p class="text-gray-500 text-sm leading-relaxed">Illuminate your investment with architectural low-voltage LED systems.</p>
-</div>
-</div>
-<div class="service-card group relative overflow-hidden rounded-2xl bg-white dark:bg-gray-800 shadow-xl border border-gray-100 dark:border-gray-700 transition-all">
-<div class="h-64 overflow-hidden">
-<div class="service-img h-full w-full bg-cover bg-center transition-transform duration-500" data-alt="professional drainage system installation" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCki9OIk56gT2Y7mIJW0k9VHFupLZ4Kt52XwHtie0tk_OKcGmICOZxWSjR8GO82FBpA7ByCrUu6l-vDKVE47r4AoLuHiD7Ur5Wyn6aZ1A1JbfHD2Y0HUVdpbXL6TjwK5b5z8bIR0DZ0zXXOoKJTWYkxPxNJPyMlrH1NzQcqkQifN1zFr-Pz0H7Bs-x3UrQqXxu_F0Oi17faj0ASp8oB8wm9qODtcXzmG6YWdBmBYEzTDudOKtLiwKmMw63AH7wip98ePscB7p38xvqg');"></div>
-</div>
-<div class="p-6">
-<h3 class="text-xl font-bold mb-2">Drainage Solutions</h3>
-<p class="text-gray-500 text-sm leading-relaxed">Protect your foundation with advanced French drains and grading.</p>
-</div>
-</div>
-<div class="service-card group relative overflow-hidden rounded-2xl bg-white dark:bg-gray-800 shadow-xl border border-gray-100 dark:border-gray-700 transition-all">
-<div class="h-64 overflow-hidden">
-<div class="service-img h-full w-full bg-cover bg-center transition-transform duration-500" data-alt="automated backyard irrigation sprinkler system" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDabXDW0SwCi9vfdWe7BgmVS83ipife9TIUcpn89KcXCQP8kbUpd8jovz8ZnZzT5qXaj7bK2k4lxWMLcqx13ZzV3fu5EAP6IvIdecrCIj4BtHFmnF2rqJ8iv_orSq6yOzjuoO08tlPKhXrAhN3HlT1mn2tfeIuanSliqWiQbNoWyGEE7xZlYbjlQf39BOeKSXP8rhTPYNPJIDgZ_fax0z43UUbfgxQJ3E--2HwVBUW2PRcROotJBaz7xzQZ5pmL_HjkRRRPe9OGRJ5T');"></div>
-</div>
-<div class="p-6">
-<h3 class="text-xl font-bold mb-2">Irrigation</h3>
-<p class="text-gray-500 text-sm leading-relaxed">Smart watering systems that conserve water while keeping plants lush.</p>
-</div>
-</div>
-<div class="service-card group relative overflow-hidden rounded-2xl bg-white dark:bg-gray-800 shadow-xl border border-gray-100 dark:border-gray-700 transition-all">
-<div class="h-64 overflow-hidden">
-<div class="service-img h-full w-full bg-cover bg-center transition-transform duration-500" data-alt="seasonal leaf cleanup and mulching" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC1mZIEDGNA8L2OZx4eo8pxzOSsB9OzOXt83r6-2h4PO14mGMtFW2anwOZ6vQinIbwIaIbcW3e6wRRG_VWx0EKXltQyY3XN6tPKrXsh_sdsOCIZaQd7yJQpj6gTPNKBCwwy3qIlilIupBpQEad6doud_Q1b9HYuAEywYz5Ojgvq88BmJqbIyfClPr06jFjWbz6diqIv4lL-xSzVsrjEskJW-wK0wYDk-j2GYJOxZrCjKaf4ilNBCPHnTD3BcMNJcw2UPxt_aDfQxBpw');"></div>
-</div>
-<div class="p-6">
-<h3 class="text-xl font-bold mb-2">Seasonal Cleanup</h3>
-<p class="text-gray-500 text-sm leading-relaxed">Fall leaf removal and Spring bed prep to keep your curb appeal high.</p>
-</div>
-</div>
-<div class="service-card group relative overflow-hidden rounded-2xl bg-white dark:bg-gray-800 shadow-xl border border-gray-100 dark:border-gray-700 transition-all">
-<div class="h-64 overflow-hidden">
-<div class="service-img h-full w-full bg-cover bg-center transition-transform duration-500" data-alt="landscape mulching and flower bed edging" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAp9uQ3Y80eexr34p7WK-lMpEFlnzIwdfI5i4kK4y0PhViYXQ-ULJXwWQHLjTReG5RXnZsAnmO54Mp6G4EGEjS5x1RSsaApOYmuZyzBuoj7ty9uyRSNjCySwjmtMGBnWBKsVEn8q4E4Pw6MoGf0y5aUctkMAa3QsrQLmrn31vJ_4Rk0xgH86v92TJvsVBdwhOfJKwiiKsnRdLCY2-sYeoqLfmKjMpxeNYIZwLmKyFArnHQs4hVrWfEW-jIsBOzou4HsbB5Jq2TjQIyN');"></div>
-</div>
-<div class="p-6">
-<h3 class="text-xl font-bold mb-2">Mulching &amp; Edging</h3>
-<p class="text-gray-500 text-sm leading-relaxed">Crisp bed lines and premium dyed mulch for a clean look.</p>
-</div>
-</div>
-<div class="service-card group relative overflow-hidden rounded-2xl bg-white dark:bg-gray-800 shadow-xl border border-gray-100 dark:border-gray-700 transition-all">
-<div class="h-64 overflow-hidden">
-<div class="service-img h-full w-full bg-cover bg-center transition-transform duration-500" data-alt="professional tree trimming and removal" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC5j274oOPn8C8ZZYLUlJBWW0EHRjQ084agzOeeM18CUHpyCTESacixMQDKVGu7fK6Sn1C9pEzoWIhNQ2ahvQ_LusbuHQ3F8Lm42Wwcik9bvpmHSJ_pD0zOOLt-0Xf-oW_jcN7S7PlVXgdIdJyc2U3kemvE6y3lKg5JtcNH7Iks9tdjPc0vaHFFmR_pMoyoVbyOQuNIMkeCvaA1E23pxM5pcoFebpVxSGn8FizipWoc2h3Mc1orJPrBg55FASPRnL0SAMiD6J_2uEFh');"></div>
-</div>
-<div class="p-6">
-<h3 class="text-xl font-bold mb-2">Tree Services</h3>
-<p class="text-gray-500 text-sm leading-relaxed">Expert pruning, removals, and stump grinding by certified arborists.</p>
-</div>
-</div>
-<div class="service-card group relative overflow-hidden rounded-2xl bg-white dark:bg-gray-800 shadow-xl border border-gray-100 dark:border-gray-700 transition-all">
-<div class="h-64 overflow-hidden">
-<div class="service-img h-full w-full bg-cover bg-center transition-transform duration-500" data-alt="custom stone fire pit in backyard" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDBQDxvfo7K3Bq8Y3O-v9CLdDCHudnQVnhtGP0JWPazzOEExIAiZ3c5_UfSdHU-W4eTWyRTPXXtVWMWE9YuebTlNndgklJPCcO8XAhOszJ4zpIn0W_tdVpAs_c6zWEBzOxTkFQk5sWo8mgDr28HsGqcni8J26Fafdmx3G0yELArTA9ztYRnW8DV30He84kbxbwV6Zi2gaH_yQ0ZP-XdVAtaGC0l5cO5cXuShvId2e3b0HXcZWCKYL5HbxjjHnRoPUtOJdJtLle601Ub');"></div>
-</div>
-<div class="p-6">
-<h3 class="text-xl font-bold mb-2">Custom Fire Pits</h3>
-<p class="text-gray-500 text-sm leading-relaxed">Enjoy your backyard year-round with custom stone fire features.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="py-24 bg-white dark:bg-background-dark overflow-hidden" id="about">
-<div class="max-w-7xl mx-auto px-6">
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-<div class="order-2 lg:order-1 space-y-8">
-<div>
-<span class="text-primary font-bold uppercase tracking-widest text-sm mb-2 block">Our Story</span>
-<h2 class="text-4xl lg:text-5xl font-black mb-6">Family Owned &amp; Locally Operated</h2>
-<div class="h-1.5 w-20 bg-primary rounded-full mb-8"></div>
-</div>
-<div class="space-y-6 text-gray-600 dark:text-gray-400 leading-relaxed text-lg">
-<p>
-                        Born and raised in the heart of Indianapolis, our family has been tending to the landscapes of this community for over two decades. What started as a single truck and a passion for craftsmanship has grown into the city's premier outdoor living specialist.
-                    </p>
-<p>
-                        We believe that being "locally owned" is more than just a label—it's a commitment. We understand the unique Indiana seasons, the local soil composition, and most importantly, the values of our neighbors in Carmel, Fishers, and beyond.
-                    </p>
-<p>
-                        When you work with us, you aren't just another client on a corporate spreadsheet. You’re a neighbor. Every project is handled with a personalized approach, ensuring that your vision is met with the same care we'd give our own homes.
-                    </p>
-</div>
-<div class="flex items-center gap-4 pt-4">
-<div class="flex flex-col">
-<span class="text-xl font-bold italic text-slate-custom dark:text-white">"Our family's name is on every job we do."</span>
-<span class="text-primary font-bold mt-1">— The Miller Family, Founders</span>
-</div>
-</div>
-</div>
-<div class="order-1 lg:order-2 relative">
-<div class="relative z-10 rounded-3xl overflow-hidden shadow-2xl border-8 border-white dark:border-gray-800">
-<img class="w-full h-auto object-cover aspect-[4/5]" data-alt="The owner family standing proudly in front of a landscaped garden" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBQDxvfo7K3Bq8Y3O-v9CLdDCHudnQVnhtGP0JWPazzOEExIAiZ3c5_UfSdHU-W4eTWyRTPXXtVWMWE9YuebTlNndgklJPCcO8XAhOszJ4zpIn0W_tdVpAs_c6zWEBzOxTkFQk5sWo8mgDr28HsGqcni8J26Fafdmx3G0yELArTA9ztYRnW8DV30He84kbxbwV6Zi2gaH_yQ0ZP-XdVAtaGC0l5cO5cXuShvId2e3b0HXcZWCKYL5HbxjjHnRoPUtOJdJtLle601Ub"/>
-</div>
-<div class="absolute -top-10 -right-10 w-40 h-40 bg-primary/20 rounded-full blur-3xl -z-0"></div>
-<div class="absolute -bottom-10 -left-10 w-60 h-60 bg-primary/10 rounded-full blur-3xl -z-0"></div>
-<div class="absolute bottom-6 right-6 bg-primary text-background-dark p-6 rounded-2xl shadow-xl z-20 hidden sm:block">
-<p class="text-3xl font-black leading-none">20+</p>
-<p class="text-sm font-bold uppercase tracking-tighter">Years in Indy</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="py-24 bg-background-light dark:bg-background-dark/50" id="why-us">
-<div class="max-w-7xl mx-auto px-6">
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-<div class="relative">
-<img class="rounded-3xl shadow-2xl relative z-10" data-alt="professional landscaper working on premium project" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCX9mmODNMzC_oA2z1LjT5qN-jfrZ349y2P_s9jyuOwECt8XYHsgtt5f2YA8SjtwdvfFis3osiovwCZ2__tfH-IXKa25-Bb_9wuYJfauXbh7D6W83ckgSvLeR2dboSzN1UmDwB9XDBRCsYKEWuk98qO-xApyVnjugQ_PV0nHKgp_an3OUq0LGbzjz4q-lPCf8LHy66KKy5C2N3D3BlUXqzYwY62-ycelXy2EbKsE6pHTGKEuXYVWROWq21Npnt_WADDQNinfhpw7e9a"/>
-<div class="absolute -bottom-6 -right-6 w-full h-full border-4 border-primary rounded-3xl -z-0"></div>
-</div>
-<div class="space-y-10">
-<div>
-<h2 class="text-4xl font-black mb-6">Why Homeowners Choose Indy Landscapers</h2>
-<p class="text-gray-600 dark:text-gray-400">We don't just cut grass. We engineer outdoor experiences that increase home value and improve quality of life.</p>
-</div>
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
-<div class="flex gap-4">
-<span class="material-symbols-outlined text-primary text-3xl font-bold">location_on</span>
-<div>
-<h4 class="font-bold mb-1">Local Experts</h4>
-<p class="text-sm text-gray-500">Deep knowledge of Indiana soil and climate.</p>
-</div>
-</div>
-<div class="flex gap-4">
-<span class="material-symbols-outlined text-primary text-3xl font-bold">verified</span>
-<div>
-<h4 class="font-bold mb-1">Premium Materials</h4>
-<p class="text-sm text-gray-500">Only the highest grade stones and nursery stock.</p>
-</div>
-</div>
-<div class="flex gap-4">
-<span class="material-symbols-outlined text-primary text-3xl font-bold">schedule</span>
-<div>
-<h4 class="font-bold mb-1">Reliable Timing</h4>
-<p class="text-sm text-gray-500">We show up when we say we will. Guaranteed.</p>
-</div>
-</div>
-<div class="flex gap-4">
-<span class="material-symbols-outlined text-primary text-3xl font-bold">handyman</span>
-<div>
-<h4 class="font-bold mb-1">Expert Crews</h4>
-<p class="text-sm text-gray-500">In-house trained professionals, no random subs.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<div class="bg-primary py-12">
-<div class="max-w-7xl mx-auto px-6 flex flex-wrap justify-center gap-12 text-background-dark">
-<div class="flex items-center gap-4">
-<span class="material-symbols-outlined text-5xl">verified_user</span>
-<div>
-<p class="text-xl font-black uppercase">5-Year Warranty</p>
-<p class="font-bold opacity-80">On all hardscaping workmanship</p>
-</div>
-</div>
-<div class="h-16 w-px bg-background-dark/20 hidden md:block"></div>
-<div class="flex items-center gap-4">
-<span class="material-symbols-outlined text-5xl">monetization_on</span>
-<div>
-<p class="text-xl font-black uppercase">No-Pressure Quote</p>
-<p class="font-bold opacity-80">Free site visit and zero-obligation estimate</p>
-</div>
-</div>
-</div>
-</div>
-<section class="py-24" id="process">
-<div class="max-w-7xl mx-auto px-6">
-<div class="text-center mb-16">
-<h2 class="text-4xl font-black mb-4">Our Simple 4-Step Process</h2>
-<p class="text-gray-500">From concept to completion, we make it easy.</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-<div class="text-center space-y-4">
-<div class="size-16 bg-primary text-background-dark text-2xl font-black rounded-full flex items-center justify-center mx-auto mb-6">1</div>
-<h4 class="text-xl font-bold">Consultation</h4>
-<p class="text-sm text-gray-500">We visit your site to understand your vision and goals.</p>
-</div>
-<div class="text-center space-y-4">
-<div class="size-16 bg-primary text-background-dark text-2xl font-black rounded-full flex items-center justify-center mx-auto mb-6">2</div>
-<h4 class="text-xl font-bold">Detailed Quote</h4>
-<p class="text-sm text-gray-500">Transparent pricing and clear timelines for your project.</p>
-</div>
-<div class="text-center space-y-4">
-<div class="size-16 bg-primary text-background-dark text-2xl font-black rounded-full flex items-center justify-center mx-auto mb-6">3</div>
-<h4 class="text-xl font-bold">Execution</h4>
-<p class="text-sm text-gray-500">Our expert crew brings the design to life with precision.</p>
-</div>
-<div class="text-center space-y-4">
-<div class="size-16 bg-primary text-background-dark text-2xl font-black rounded-full flex items-center justify-center mx-auto mb-6">4</div>
-<h4 class="text-xl font-bold">Walkthrough</h4>
-<p class="text-sm text-gray-500">A final check to ensure every detail meets our elite standards.</p>
-</div>
-</div>
-</div>
-</section>
-<section class="py-24 bg-slate-custom text-white" id="gallery">
-<div class="max-w-7xl mx-auto px-6">
-<div class="text-center mb-16">
-<h2 class="text-4xl font-black mb-4">Before &amp; After Showcase</h2>
-<p class="text-gray-400 italic">See the transformation of real Indianapolis homes.</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
-<div class="relative group rounded-2xl overflow-hidden shadow-2xl">
-<div class="flex">
-<div class="w-1/2 h-80 bg-cover bg-center grayscale" data-alt="old neglected backyard before landscaping" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDjVaUYXtxiO8FiinZMqipHKnL9Yq9PbRRDgm2-0a32WV0vqjEvis718e4Yqi1MWLVviCRzD_m8db1x8QIvAz8iLp5QyqsY6eAh5lIRhzl-uHTZ3uBFupDJd7qbFi_Y1EkIulvQm3iu8oZxVYxgBOHUdhS2CLpQPKX3D3ubXNgRlVQbbrTbwBrnZrgux--aArcE2_sPFnQjywE5Gs55kWxv6aeKEVmeoTjxRiRt70_rPhS2Du9o6Ys1J07hfJL-ro0wiJsT5yjgMb9G');">
-<span class="absolute top-4 left-4 bg-black/50 px-3 py-1 text-xs uppercase font-bold rounded">Before</span>
-</div>
-<div class="w-1/2 h-80 bg-cover bg-center border-l-2 border-primary" data-alt="transformed modern backyard with patio and lighting" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCq1b8rixu3ifLPUc8xIFkzqszWqS1JK7fxmhmLxeZTyGLhG2RgezVqpBj3wTN70fzYxIuosUXcCQBd-P4LGuobK620D-9K__0ZUvLSclt9lla-AWbD_Qb7glOcOdfJibAvI2QtngR5g69wUVk8uVohtiTIrDWamM_qZwVoQASlXvkKRCZaDFiMZz8EGG_qq1Bs3nELmOmzLKSZLtruO7Cxi9r0GZ9N-c9Zuh5jvlrTFAasXEh-vx2fm1vwTCGZQfkqcOjcwCLKuu6Q');">
-<span class="absolute top-4 right-4 bg-primary px-3 py-1 text-xs uppercase font-bold text-background-dark rounded">After</span>
-</div>
-</div>
-</div>
-<div class="relative group rounded-2xl overflow-hidden shadow-2xl">
-<div class="flex">
-<div class="w-1/2 h-80 bg-cover bg-center grayscale" data-alt="overgrown lawn before professional maintenance" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDW68zLR0g9G3lY_qPYBP5CWAiiyZuM5mJQZhlBTfI2-UMCyIWVzbGhnKNAXj67G3iwZjIZUH-Rkr7Aa52PTs8QKKnIyDQ2H7aQ8p5SR-2onLrgdaStBVc-jb5Sji4S4BYfPpiJgLRvgPIhQNXucQAVox50baHTH8Po0dfEUxPYco2IL_zYWWHhMPHwUqraGNNmlSwFJXjr43j_TerRgsheJOhbrwi0oonxiZVVXlHOzN0LqGj9NbgAFy73-fcj419XmAHSJfxMlVMR');">
-<span class="absolute top-4 left-4 bg-black/50 px-3 py-1 text-xs uppercase font-bold rounded">Before</span>
-</div>
-<div class="w-1/2 h-80 bg-cover bg-center border-l-2 border-primary" data-alt="perfectly edged and mowed lawn after maintenance" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBTDLY9Ozku_O3AyuInkUfsmY4bJ142QASB_uV_BVN1AqinmtJTF3dZ9WyEdClYKa6Br42XY_BhYDuOtUZhR9nQvATxop9slXbUUoKaBR0XiMHnbsrfQdn1W9l9eYBg7DyzHu_6gEjt9lDkO3-xgDeLs_W50dc46Hqh0FvOqUJvwceyTYY1iJrSATEOqZ1DodXWZhbekolLmo6crWlQs8cIhumrJQHwUyqh3UZEWf83zskR_FsQsBgws7wlQStUetBLGeQ0kSh-_rq_');">
-<span class="absolute top-4 right-4 bg-primary px-3 py-1 text-xs uppercase font-bold text-background-dark rounded">After</span>
-</div>
-</div>
-</div>
-</div>
-<div class="max-w-4xl mx-auto">
-<div class="text-center space-y-8">
-<span class="material-symbols-outlined text-primary text-6xl">format_quote</span>
-<p class="text-2xl font-medium leading-relaxed italic">
-                    "Indy Landscapers completely changed how we use our home. The new patio and lighting are incredible. Their crew was professional, fast, and remarkably clean. Highly recommend!"
-                </p>
-<div>
-<p class="font-black text-xl">Sarah Johnson</p>
-<p class="text-primary font-bold">Carmel, IN Resident</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="py-24">
-<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-<div>
-<h2 class="text-4xl font-black mb-8">Serving All of Greater Indianapolis</h2>
-<div class="grid grid-cols-2 gap-y-4 gap-x-8">
-<div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Carmel</div>
-<div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Fishers</div>
-<div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Zionsville</div>
-<div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Noblesville</div>
-<div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Broad Ripple</div>
-<div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Greenwood</div>
-<div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Avon</div>
-<div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Westfield</div>
-</div>
-<p class="mt-8 text-gray-500 italic">Not sure if we cover your area? Give us a call!</p>
-</div>
-<div class="h-96 bg-gray-200 dark:bg-gray-800 rounded-3xl overflow-hidden relative shadow-inner border border-gray-100 dark:border-gray-700">
-<div class="absolute inset-0 bg-cover bg-center grayscale hover:grayscale-0 transition-all" data-alt="map of Indianapolis highlighting service areas" data-location="Indianapolis" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCg0P9zK47YM4kziIfIjC-5jI5etlaT2iMJAjwPAZJV7Y8Ir-f9A4iOO1-KHmbHmpgnKMWL9pBy5BgxfP4ayBtq7MyWyXg6ulVmuC5QzXSq5vEbYbSOtoYdzbmGxjiK7qRq20sZ8bSKl1aPnAobvoAYdsUyBvZ0UlW4bKpH0kT4U1ER_ddA2DENzTw21pxsULKim2eq7SJcB23K7WV400vmvv2ZNtMB5IZrawTKIASUj_F0GgNl6UsC2kMvwz_NJ4iEbLEv-mq3rNNT');"></div>
-<div class="absolute inset-0 bg-primary/10 pointer-events-none"></div>
-<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white dark:bg-gray-900 px-6 py-4 rounded-xl shadow-xl border border-primary/30 flex items-center gap-3">
-<span class="material-symbols-outlined text-primary fill-1">location_on</span>
-<span class="font-black">Our Headquarters</span>
-</div>
-</div>
-</div>
-</section>
-<section class="py-24 bg-white dark:bg-background-dark/80">
-<div class="max-w-3xl mx-auto px-6">
-<h2 class="text-4xl font-black text-center mb-12">Common Questions</h2>
-<div class="space-y-4">
-<details class="group bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden border border-gray-100 dark:border-gray-700">
-<summary class="flex justify-between items-center p-6 cursor-pointer font-bold list-none">
-                    How much does a typical project cost?
-                    <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
-</summary>
-<div class="px-6 pb-6 text-sm text-gray-500 leading-relaxed">
-                    Project costs vary wildly based on scope. Lawn maintenance plans start at $45/visit, while custom hardscaping projects typically begin at $5,000. We provide firm, detailed quotes after a site visit.
-                </div>
-</details>
-<details class="group bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden border border-gray-100 dark:border-gray-700">
-<summary class="flex justify-between items-center p-6 cursor-pointer font-bold list-none">
-                    Are you licensed and insured in Indiana?
-                    <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
-</summary>
-<div class="px-6 pb-6 text-sm text-gray-500 leading-relaxed">
-                    Yes, we are fully licensed and maintain $2M in general liability insurance and workers' comp for all employees. Certificates are available upon request.
-                </div>
-</details>
-<details class="group bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden border border-gray-100 dark:border-gray-700">
-<summary class="flex justify-between items-center p-6 cursor-pointer font-bold list-none">
-                    How long does a hardscape installation take?
-                    <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
-</summary>
-<div class="px-6 pb-6 text-sm text-gray-500 leading-relaxed">
-                    Most patios and walkways are completed within 5-10 business days, depending on complexity and weather. We prioritize finishing one job before moving to the next.
-                </div>
-</details>
-<details class="group bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden border border-gray-100 dark:border-gray-700">
-<summary class="flex justify-between items-center p-6 cursor-pointer font-bold list-none">
-                    Do you offer a warranty on plants?
-                    <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
-</summary>
-<div class="px-6 pb-6 text-sm text-gray-500 leading-relaxed">
-                    Yes, we offer a 1-year replacement warranty on all trees and shrubs we install, provided an irrigation system is present or a maintenance plan is active.
-                </div>
-</details>
-<details class="group bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden border border-gray-100 dark:border-gray-700">
-<summary class="flex justify-between items-center p-6 cursor-pointer font-bold list-none">
-                    What happens if it rains on a scheduled day?
-                    <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
-</summary>
-<div class="px-6 pb-6 text-sm text-gray-500 leading-relaxed">
-                    We track weather closely. If rain prevents safe or quality work, we'll notify you via SMS/Email and reschedule for the next available clear day.
-                </div>
-</details>
-</div>
-</div>
-</section>
-<section class="py-20 bg-primary/10 border-t border-primary/20">
-<div class="max-w-7xl mx-auto px-6 text-center">
-<h2 class="text-4xl lg:text-5xl font-black mb-8">Ready to Build Your Dream Yard?</h2>
-<div class="flex flex-wrap justify-center gap-6">
-<a class="bg-primary text-background-dark px-10 py-5 rounded-2xl font-black text-xl hover:scale-105 transition-transform" href="#quote">Start Your Free Quote</a>
-<a class="bg-background-dark text-white px-10 py-5 rounded-2xl font-black text-xl flex items-center gap-3" href="tel:8888888888">
-<span class="material-symbols-outlined">call</span> Call 888-888-8888
-            </a>
-</div>
-<button class="mt-12 text-sm font-bold uppercase tracking-widest text-gray-500 hover:text-primary transition-colors flex items-center gap-2 mx-auto" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
-<span class="material-symbols-outlined">arrow_upward</span> Back to Top
-        </button>
-</div>
-</section>
-<footer class="bg-background-dark text-white py-16 px-6">
-<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
-<div class="flex items-center gap-2">
-<div class="size-6 text-primary">
-<svg fill="currentColor" viewBox="0 0 48 48">
-<path d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z"></path>
-</svg>
-</div>
-<span class="text-lg font-extrabold tracking-tight">INDY LANDSCAPERS</span>
-</div>
-<div class="flex gap-8 text-sm text-gray-400">
-<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
-<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
-<a class="hover:text-primary transition-colors" href="#">Employment</a>
-</div>
-<p class="text-xs text-gray-500">© 2024 Indy Landscapers. All rights reserved. Locally owned in Indianapolis, IN.</p>
-</div>
-</footer>
+  </head>
 
-</body></html>
+  <body class="bg-background-light dark:bg-background-dark text-slate-custom dark:text-gray-100 font-display">
+    <header
+      class="sticky top-0 z-50 w-full bg-white/90 dark:bg-background-dark/90 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800"
+    >
+      <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <div class="size-8 text-primary">
+            <svg fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z"
+              ></path>
+            </svg>
+          </div>
+          <span class="text-xl font-extrabold tracking-tight">[COMPANY NAME]</span>
+        </div>
+
+        <nav class="hidden md:flex items-center gap-8">
+          <a class="text-sm font-semibold hover:text-primary transition-colors" href="#services">Services</a>
+          <a class="text-sm font-semibold hover:text-primary transition-colors" href="#about">About</a>
+          <a class="text-sm font-semibold hover:text-primary transition-colors" href="#why-us">Why Us</a>
+          <a class="text-sm font-semibold hover:text-primary transition-colors" href="#process">Process</a>
+          <a
+            class="flex items-center gap-2 bg-primary text-background-dark px-5 py-2.5 rounded-lg font-bold hover:brightness-105 transition-all"
+            href="tel:8888888888"
+          >
+            <span class="material-symbols-outlined text-lg">call</span>
+            Call for a Free Estimate
+          </a>
+        </nav>
+      </div>
+    </header>
+
+<!-- HERO (with background image + heavy overlay) -->
+<section class="relative overflow-hidden pt-12 pb-20 px-6 lg:px-0">
+  <!-- Background Image -->
+  <div
+    class="absolute inset-0 bg-cover bg-center"
+    style="background-image: url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=2400&q=80');"
+    aria-hidden="true"
+  ></div>
+
+  <!-- Heavy Overlay -->
+  <div class="absolute inset-0 bg-black/50" aria-hidden="true"></div>
+
+  <!-- Optional: subtle gradient for extra “premium” depth -->
+  <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/65 to-black/80" aria-hidden="true"></div>
+
+  <!-- Content -->
+  <div class="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <div class="space-y-8">
+      <div>
+        <span
+          class="inline-block py-1 px-3 bg-primary/20 text-primary text-xs font-bold uppercase tracking-widest rounded mb-4"
+          >Family-Owned. Premium Landscaping &amp; Outdoor Living.</span
+        >
+        <h1 class="text-5xl lg:text-7xl font-black leading-tight tracking-tight text-white">
+          Professional Landscaping in [City] That Makes Your Home Feel Like a
+          <span class="text-primary">Resort</span>
+        </h1>
+        <p class="mt-6 text-lg text-white/80 max-w-lg leading-relaxed">
+          From clean, reliable lawn care to custom patios, lighting, drainage, and full landscape design—our licensed and
+          insured team builds outdoor spaces that look incredible, hold up for years, and boost curb appeal (and home
+          value).
+        </p>
+      </div>
+
+      <div class="flex flex-wrap gap-6 items-center">
+        <div class="flex items-center gap-1 text-yellow-400">
+          <span class="material-symbols-outlined fill-1">star</span>
+          <span class="material-symbols-outlined fill-1">star</span>
+          <span class="material-symbols-outlined fill-1">star</span>
+          <span class="material-symbols-outlined fill-1">star</span>
+          <span class="material-symbols-outlined fill-1">star</span>
+          <span class="ml-2 text-white font-bold">5.0 Rating • [###]+ Reviews</span>
+        </div>
+        <div class="h-4 w-px bg-white/30"></div>
+        <div class="flex items-center gap-2 text-sm font-semibold text-white/75">
+          <span class="material-symbols-outlined text-primary">verified</span>
+          Licensed • Insured • Background-Checked Crews
+        </div>
+      </div>
+
+      <div class="flex flex-wrap gap-4">
+        <a
+          class="bg-primary text-background-dark px-8 py-4 rounded-xl font-bold text-lg hover:shadow-lg hover:shadow-primary/20 transition-all"
+          href="#quote"
+          >Get a Free Estimate</a
+        >
+        <a
+          class="bg-white/10 border-2 border-white/20 text-white px-8 py-4 rounded-xl font-bold text-lg flex items-center gap-2 hover:bg-white/15 transition-all"
+          href="tel:8888888888"
+        >
+          <span class="material-symbols-outlined">call</span> Call for Pricing
+        </a>
+      </div>
+    </div>
+
+    <!-- Quote Form -->
+    <div
+      class="bg-white/95 dark:bg-gray-800/95 backdrop-blur p-8 rounded-2xl shadow-2xl border border-white/20 dark:border-gray-700"
+      id="quote"
+    >
+      <h3 class="text-2xl font-bold mb-2 text-slate-custom dark:text-white">Request Your Free Estimate</h3>
+      <p class="text-gray-600 dark:text-gray-400 mb-6 text-sm">
+        Tell us what you need—we’ll reach out within 1 business day to schedule a quick walkthrough and provide pricing.
+      </p>
+
+      <form class="space-y-4">
+        <input
+          class="w-full bg-gray-50 dark:bg-gray-900 border-gray-200 dark:border-gray-700 rounded-lg p-3 text-sm focus:ring-primary focus:border-primary"
+          placeholder="Full Name"
+          type="text"
+        />
+        <div class="grid grid-cols-2 gap-4">
+          <input
+            class="bg-gray-50 dark:bg-gray-900 border-gray-200 dark:border-gray-700 rounded-lg p-3 text-sm focus:ring-primary focus:border-primary"
+            placeholder="Email"
+            type="email"
+          />
+          <input
+            class="bg-gray-50 dark:bg-gray-900 border-gray-200 dark:border-gray-700 rounded-lg p-3 text-sm focus:ring-primary focus:border-primary"
+            placeholder="Phone"
+            type="tel"
+          />
+        </div>
+
+        <select
+          class="w-full bg-gray-50 dark:bg-gray-900 border-gray-200 dark:border-gray-700 rounded-lg p-3 text-sm focus:ring-primary focus:border-primary"
+        >
+          <option>What do you need help with?</option>
+          <option>Landscape Design</option>
+          <option>Hardscaping (Patios / Walkways / Walls)</option>
+          <option>Lawn Care &amp; Maintenance</option>
+          <option>Landscape Beds &amp; Planting (Mulch / Edging)</option>
+          <option>Drainage &amp; Grading</option>
+          <option>Irrigation</option>
+          <option>Outdoor Lighting</option>
+          <option>Seasonal Cleanup</option>
+          <option>Tree Services</option>
+          <option>Other</option>
+        </select>
+
+        <textarea
+          class="w-full bg-gray-50 dark:bg-gray-900 border-gray-200 dark:border-gray-700 rounded-lg p-3 text-sm focus:ring-primary focus:border-primary"
+          placeholder="Describe your project (size of yard, what you want done, timeline, etc.)"
+          rows="3"
+        ></textarea>
+
+        <button
+          class="w-full bg-primary text-background-dark font-black py-4 rounded-lg uppercase tracking-wider hover:brightness-105 transition-all"
+        >
+          Get My Free Estimate
+        </button>
+        <p class="text-center text-[10px] text-gray-500 mt-2 italic">Your info stays private. No spam. Ever.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+    <!-- PROOF BAR -->
+    <section class="bg-slate-custom py-10">
+      <div class="max-w-7xl mx-auto px-6 flex flex-wrap justify-around items-center gap-10">
+        <div class="flex items-center gap-3 text-white">
+          <div class="bg-white/10 p-2 rounded-lg">
+            <span class="material-symbols-outlined text-primary text-3xl">reviews</span>
+          </div>
+          <div>
+            <p class="text-2xl font-bold">300+</p>
+            <p class="text-xs text-gray-400 uppercase tracking-widest">5-Star Reviews</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3 text-white">
+          <div class="bg-white/10 p-2 rounded-lg">
+            <span class="material-symbols-outlined text-primary text-3xl">task_alt</span>
+          </div>
+          <div>
+            <p class="text-2xl font-bold">1,000+</p>
+            <p class="text-xs text-gray-400 uppercase tracking-widest">Projects Completed</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-8 opacity-50 filter grayscale invert contrast-200">
+          <span class="material-symbols-outlined text-4xl">eco</span>
+          <span class="material-symbols-outlined text-4xl">landscape</span>
+          <span class="material-symbols-outlined text-4xl">home_work</span>
+          <span class="material-symbols-outlined text-4xl">architecture</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="py-24 px-6" id="services">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-black mb-4">Landscaping Services Built for Curb Appeal &amp; Long-Term Value</h2>
+          <div class="h-1.5 w-24 bg-primary mx-auto rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="service-card group relative overflow-hidden rounded-2xl bg-white dark:bg-gray-800 shadow-xl border border-gray-100 dark:border-gray-700 transition-all">
+            <div class="h-64 overflow-hidden">
+              <div
+                class="service-img h-full w-full bg-cover bg-center transition-transform duration-500"
+                data-alt="high end backyard stone patio design"
+                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBnSNrORjCtEG_KgSjzSq4Ldh-JmRzzzGGKhJWlMPGAiMcSbZZlw6EgIaXZc_yuBced4HHjkd-ZGpVi2r6JJ5hJXQup2dAqqvNaN01tlKf-fHJ8BQftuXvCKUH9XTZVcGS-J0eFdgAJ4iSVzyg9affEEZnGRn7eG1_JaCwyJC1T0BMz_AOAZa8o3omgxscTeZouiLpXzlSRXHU8YhZsUIezsZGEDa8HgpGAb9UOTjTRlmejtQd3Ld0NzMFcgfyTLi41lgSrzofBn_bD');"
+              ></div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Hardscaping</h3>
+              <p class="text-gray-500 text-sm leading-relaxed">
+                Patios, walkways, steps, and retaining walls—installed right the first time for strength, drainage, and timeless style.
+              </p>
+            </div>
+          </div>
+
+          <div class="service-card group relative overflow-hidden rounded-2xl bg-white dark:bg-gray-800 shadow-xl border border-gray-100 dark:border-gray-700 transition-all">
+            <div class="h-64 overflow-hidden">
+              <div
+                class="service-img h-full w-full bg-cover bg-center transition-transform duration-500"
+                data-alt="perfectly manicured green luxury lawn"
+                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuANJ5tyspgcYuUwDsCzADtk1L9iBZdAxwz5-FB6vzwhtJllI-dcbeG78c2st8dHsCv8EtoQgeo01C92vpCL8V5MlRxcm5wmaqqiTSsDFqmPURtRZ7zxRH9wZWu3WuuXpsRtxWj3wJHb9BMG22gpEX90RIzYjQO3vjWzRuaOm6msjcJpi4Q0PwYZz72v3xaDgVIZ0_zvTlU-kENtR-SUF9iOk4khyIA1qyMM1s5mcmzXLpt9TWL1EqwT2vN7OpRbgvgPmGVNj7gHSCE2');"
+              ></div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Lawn Care</h3>
+              <p class="text-gray-500 text-sm leading-relaxed">
+                Reliable mowing, trimming, and turf programs that keep your lawn thick, green, and clean-looking week after week.
+              </p>
+            </div>
+          </div>
+
+          <div class="service-card group relative overflow-hidden rounded-2xl bg-white dark:bg-gray-800 shadow-xl border border-gray-100 dark:border-gray-700 transition-all">
+            <div class="h-64 overflow-hidden">
+              <div
+                class="service-img h-full w-full bg-cover bg-center transition-transform duration-500"
+                data-alt="elegant outdoor landscape lighting at night"
+                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA1XWdn4PmGy1GxcpLaj4WCMKZ-rb6m03oL5wGG51i4FDvmEVcTBd05Asga6Xy30z4YzhR7k4wpGf9f363QefHThZoEMJGAC4VvaH7vwdL_wsRE3hHE4fHkMnlTrSMGHehnYwLUh9uiUd3PVEIzhpLIbtWEJKj_6hFmoaLJzGzhOVZT5x6kC2eSdYvBT-QtzI9K9eeqP0p8aABNPZDUmDI3bVFBjd--gg4ho8WA0QKj69UEsn0ETx50YT9bNJlv-6wV47SRbAOFjDdK');"
+              ></div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Outdoor Lighting</h3>
+              <p class="text-gray-500 text-sm leading-relaxed">
+                Low-voltage LED lighting that improves safety, highlights your landscaping, and makes your home shine at night.
+              </p>
+            </div>
+          </div>
+
+          <div class="service-card group relative overflow-hidden rounded-2xl bg-white dark:bg-gray-800 shadow-xl border border-gray-100 dark:border-gray-700 transition-all">
+            <div class="h-64 overflow-hidden">
+              <div
+                class="service-img h-full w-full bg-cover bg-center transition-transform duration-500"
+                data-alt="professional drainage system installation"
+                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCki9OIk56gT2Y7mIJW0k9VHFupLZ4Kt52XwHtie0tk_OKcGmICOZxWSjR8GO82FBpA7ByCrUu6l-vDKVE47r4AoLuHiD7Ur5Wyn6aZ1A1JbfHD2Y0HUVdpbXL6TjwK5b5z8bIR0DZ0zXXOoKJTWYkxPxNJPyMlrH1NzQcqkQifN1zFr-Pz0H7Bs-x3UrQqXxu_F0Oi17faj0ASp8oB8wm9qODtcXzmG6YWdBmBYEzTDudOKtLiwKmMw63AH7wip98ePscB7p38xvqg');"
+              ></div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Drainage Solutions</h3>
+              <p class="text-gray-500 text-sm leading-relaxed">
+                French drains, downspout extensions, grading, and dry creek beds to stop pooling water and protect your foundation.
+              </p>
+            </div>
+          </div>
+
+          <div class="service-card group relative overflow-hidden rounded-2xl bg-white dark:bg-gray-800 shadow-xl border border-gray-100 dark:border-gray-700 transition-all">
+            <div class="h-64 overflow-hidden">
+              <div
+                class="service-img h-full w-full bg-cover bg-center transition-transform duration-500"
+                data-alt="automated backyard irrigation sprinkler system"
+                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDabXDW0SwCi9vfdWe7BgmVS83ipife9TIUcpn89KcXCQP8kbUpd8jovz8ZnZzT5qXaj7bK2k4lxWMLcqx13ZzV3fu5EAP6IvIdecrCIj4BtHFmnF2rqJ8iv_orSq6yOzjuoO08tlPKhXrAhN3HlT1mn2tfeIuanSliqWiQbNoWyGEE7xZlYbjlQf39BOeKSXP8rhTPYNPJIDgZ_fax0z43UUbfgxQJ3E--2HwVBUW2PRcROotJBaz7xzQZ5pmL_HjkRRRPe9OGRJ5T');"
+              ></div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Irrigation</h3>
+              <p class="text-gray-500 text-sm leading-relaxed">
+                Smart sprinkler systems and repairs that water efficiently—so plants thrive without wasting money.
+              </p>
+            </div>
+          </div>
+
+          <div class="service-card group relative overflow-hidden rounded-2xl bg-white dark:bg-gray-800 shadow-xl border border-gray-100 dark:border-gray-700 transition-all">
+            <div class="h-64 overflow-hidden">
+              <div
+                class="service-img h-full w-full bg-cover bg-center transition-transform duration-500"
+                data-alt="seasonal leaf cleanup and mulching"
+                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC1mZIEDGNA8L2OZx4eo8pxzOSsB9OzOXt83r6-2h4PO14mGMtFW2anwOZ6vQinIbwIaIbcW3e6wRRG_VWx0EKXltQyY3XN6tPKrXsh_sdsOCIZaQd7yJQpj6gTPNKBCwwy3qIlilIupBpQEad6doud_Q1b9HYuAEywYz5Ojgvq88BmJqbIyfClPr06jFjWbz6diqIv4lL-xSzVsrjEskJW-wK0wYDk-j2GYJOxZrCjKaf4ilNBCPHnTD3BcMNJcw2UPxt_aDfQxBpw');"
+              ></div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Seasonal Cleanup</h3>
+              <p class="text-gray-500 text-sm leading-relaxed">
+                Spring and fall cleanups, leaf removal, bed refresh, and haul-away—so your yard looks sharp all season.
+              </p>
+            </div>
+          </div>
+
+          <div class="service-card group relative overflow-hidden rounded-2xl bg-white dark:bg-gray-800 shadow-xl border border-gray-100 dark:border-gray-700 transition-all">
+            <div class="h-64 overflow-hidden">
+              <div
+                class="service-img h-full w-full bg-cover bg-center transition-transform duration-500"
+                data-alt="landscape mulching and flower bed edging"
+                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAp9uQ3Y80eexr34p7WK-lMpEFlnzIwdfI5i4kK4y0PhViYXQ-ULJXwWQHLjTReG5RXnZsAnmO54Mp6G4EGEjS5x1RSsaApOYmuZyzBuoj7ty9uyRSNjCySwjmtMGBnWBKsVEn8q4E4Pw6MoGf0y5aUctkMAa3QsrQLmrn31vJ_4Rk0xgH86v92TJvsVBdwhOfJKwiiKsnRdLCY2-sYeoqLfmKjMpxeNYIZwLmKyFArnHQs4hVrWfEW-jIsBOzou4HsbB5Jq2TjQIyN');"
+              ></div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Landscape Beds &amp; Planting</h3>
+              <p class="text-gray-500 text-sm leading-relaxed">
+                Crisp bed lines, weed barrier options, and premium mulch for a clean, finished look that lasts.
+              </p>
+            </div>
+          </div>
+
+          <div class="service-card group relative overflow-hidden rounded-2xl bg-white dark:bg-gray-800 shadow-xl border border-gray-100 dark:border-gray-700 transition-all">
+            <div class="h-64 overflow-hidden">
+              <div
+                class="service-img h-full w-full bg-cover bg-center transition-transform duration-500"
+                data-alt="professional tree trimming and removal"
+                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC5j274oOPn8C8ZZYLUlJBWW0EHRjQ084agzOeeM18CUHpyCTESacixMQDKVGu7fK6Sn1C9pEzoWIhNQ2ahvQ_LusbuHQ3F8Lm42Wwcik9bvpmHSJ_pD0zOOLt-0Xf-oW_jcN7S7PlVXgdIdJyc2U3kemvE6y3lKg5JtcNH7Iks9tdjPc0vaHFFmR_pMoyoVbyOQuNIMkeCvaA1E23pxM5pcoFebpVxSGn8FizipWoc2h3Mc1orJPrBg55FASPRnL0SAMiD6J_2uEFh');"
+              ></div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Tree Services</h3>
+              <p class="text-gray-500 text-sm leading-relaxed">
+                Pruning, removals, and stump grinding—focused on safety, tree health, and clean job sites.
+              </p>
+            </div>
+          </div>
+
+          <div class="service-card group relative overflow-hidden rounded-2xl bg-white dark:bg-gray-800 shadow-xl border border-gray-100 dark:border-gray-700 transition-all">
+            <div class="h-64 overflow-hidden">
+              <div
+                class="service-img h-full w-full bg-cover bg-center transition-transform duration-500"
+                data-alt="custom stone fire pit in backyard"
+                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDBQDxvfo7K3Bq8Y3O-v9CLdDCHudnQVnhtGP0JWPazzOEExIAiZ3c5_UfSdHU-W4eTWyRTPXXtVWMWE9YuebTlNndgklJPCcO8XAhOszJ4zpIn0W_tdVpAs_c6zWEBzOxTkFQk5sWo8mgDr28HsGqcni8J26Fafdmx3G0yELArTA9ztYRnW8DV30He84kbxbwV6Zi2gaH_yQ0ZP-XdVAtaGC0l5cO5cXuShvId2e3b0HXcZWCKYL5HbxjjHnRoPUtOJdJtLle601Ub');"
+              ></div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Landscape Design & Installation</h3>
+              <p class="text-gray-500 text-sm leading-relaxed">
+                Gather year-round with a built-to-last fire feature designed around your patio and seating layout.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="py-24 bg-white dark:bg-background-dark overflow-hidden" id="about">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div class="order-2 lg:order-1 space-y-8">
+            <div>
+              <span class="text-primary font-bold uppercase tracking-widest text-sm mb-2 block">Locally Owned</span>
+              <h2 class="text-4xl lg:text-5xl font-black mb-6">Family Owned &amp; Locally Operated</h2>
+              <div class="h-1.5 w-20 bg-primary rounded-full mb-8"></div>
+            </div>
+
+            <div class="space-y-6 text-gray-600 dark:text-gray-400 leading-relaxed text-lg">
+              <p>
+                [Company Name] was built on one simple promise: show up, do the work right, and leave every property better than we found it.
+                From weekly maintenance to full outdoor transformations, we bring craftsmanship and clear communication to every job.
+              </p>
+              <p>
+                We know the soil, slopes, drainage issues, and seasonal swings that come with living in [City] and the surrounding areas.
+                That local experience helps us design landscapes that look great—and actually hold up.
+              </p>
+              <p>
+                You’ll get honest recommendations, transparent pricing, and a crew that respects your home.
+                If you want premium results without the premium headaches, you’re in the right place.
+              </p>
+            </div>
+
+            <div class="flex items-center gap-4 pt-4">
+              <div class="flex flex-col">
+                <span class="text-xl font-bold italic text-slate-custom dark:text-white">
+                  "We treat your property like it’s ours—clean work, clear timelines, and details that hold up."
+                </span>
+                <span class="text-primary font-bold mt-1">— [Owner Name], Owner</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="order-1 lg:order-2 relative">
+            <div class="relative z-10 rounded-3xl overflow-hidden shadow-2xl border-8 border-white dark:border-gray-800">
+              <img
+                class="w-full h-auto object-cover aspect-[4/5]"
+                data-alt="The owner family standing proudly in front of a landscaped garden"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBQDxvfo7K3Bq8Y3O-v9CLdDCHudnQVnhtGP0JWPazzOEExIAiZ3c5_UfSdHU-W4eTWyRTPXXtVWMWE9YuebTlNndgklJPCcO8XAhOszJ4zpIn0W_tdVpAs_c6zWEBzOxTkFQk5sWo8mgDr28HsGqcni8J26Fafdmx3G0yELArTA9ztYRnW8DV30He84kbxbwV6Zi2gaH_yQ0ZP-XdVAtaGC0l5cO5cXuShvId2e3b0HXcZWCKYL5HbxjjHnRoPUtOJdJtLle601Ub"
+              />
+            </div>
+            <div class="absolute -top-10 -right-10 w-40 h-40 bg-primary/20 rounded-full blur-3xl -z-0"></div>
+            <div class="absolute -bottom-10 -left-10 w-60 h-60 bg-primary/10 rounded-full blur-3xl -z-0"></div>
+            <div class="absolute bottom-6 right-6 bg-primary text-background-dark p-6 rounded-2xl shadow-xl z-20 hidden sm:block">
+              <p class="text-3xl font-black leading-none">[X]+</p>
+              <p class="text-sm font-bold uppercase tracking-tighter">Years Serving [City]</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY US -->
+    <section class="py-24 bg-background-light dark:bg-background-dark/50" id="why-us">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+          <div class="relative">
+            <img
+              class="rounded-3xl shadow-2xl relative z-10"
+              data-alt="professional landscaper working on premium project"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCX9mmODNMzC_oA2z1LjT5qN-jfrZ349y2P_s9jyuOwECt8XYHsgtt5f2YA8SjtwdvfFis3osiovwCZ2__tfH-IXKa25-Bb_9wuYJfauXbh7D6W83ckgSvLeR2dboSzN1UmDwB9XDBRCsYKEWuk98qO-xApyVnjugQ_PV0nHKgp_an3OUq0LGbzjz4q-lPCf8LHy66KKy5C2N3D3BlUXqzYwY62-ycelXy2EbKsE6pHTGKEuXYVWROWq21Npnt_WADDQNinfhpw7e9a"
+            />
+            <div class="absolute -bottom-6 -right-6 w-full h-full border-4 border-primary rounded-3xl -z-0"></div>
+          </div>
+
+          <div class="space-y-10">
+            <div>
+              <h2 class="text-4xl font-black mb-6">Why Homeowners Choose [Company Name]</h2>
+              <p class="text-gray-600 dark:text-gray-400">
+                We build outdoor spaces that look better, function better, and stay that way—without missed appointments, sloppy crews, or vague pricing.
+              </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+              <div class="flex gap-4">
+                <span class="material-symbols-outlined text-primary text-3xl font-bold">location_on</span>
+                <div>
+                  <h4 class="font-bold mb-1">Local Know-How</h4>
+                  <p class="text-sm text-gray-500">
+                    Designs that match [City] soil, slopes, and seasons—so your yard performs, not just looks good.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex gap-4">
+                <span class="material-symbols-outlined text-primary text-3xl font-bold">verified</span>
+                <div>
+                  <h4 class="font-bold mb-1">Materials That Last</h4>
+                  <p class="text-sm text-gray-500">
+                    We use proven products and install them correctly—so you don’t redo the job in 2 years.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex gap-4">
+                <span class="material-symbols-outlined text-primary text-3xl font-bold">schedule</span>
+                <div>
+                  <h4 class="font-bold mb-1">Clear Timelines</h4>
+                  <p class="text-sm text-gray-500">
+                    You’ll know what’s happening and when. We communicate early if weather affects scheduling.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex gap-4">
+                <span class="material-symbols-outlined text-primary text-3xl font-bold">handyman</span>
+                <div>
+                  <h4 class="font-bold mb-1">Professional Crews</h4>
+                  <p class="text-sm text-gray-500">
+                    Uniformed, trained, and respectful teams that keep a clean job site from start to finish.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GUARANTEES -->
+    <div class="bg-primary py-12">
+      <div class="max-w-7xl mx-auto px-6 flex flex-wrap justify-center gap-12 text-background-dark">
+        <div class="flex items-center gap-4">
+          <span class="material-symbols-outlined text-5xl">verified_user</span>
+          <div>
+            <p class="text-xl font-black uppercase">Workmanship Warranty</p>
+            <p class="font-bold opacity-80">Up to [X]-Year Coverage on Hardscaping Installations</p>
+          </div>
+        </div>
+
+        <div class="h-16 w-px bg-background-dark/20 hidden md:block"></div>
+
+        <div class="flex items-center gap-4">
+          <span class="material-symbols-outlined text-5xl">monetization_on</span>
+          <div>
+            <p class="text-xl font-black uppercase">Free, No-Pressure Estimate</p>
+            <p class="font-bold opacity-80">On-Site Walkthrough + Written Pricing</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROCESS -->
+    <section class="py-24" id="process">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-black mb-4">Our Simple 4-Step Process</h2>
+          <p class="text-gray-500">Fast quotes. Clear timelines. Professional results.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div class="text-center space-y-4">
+            <div class="size-16 bg-primary text-background-dark text-2xl font-black rounded-full flex items-center justify-center mx-auto mb-6">
+              1
+            </div>
+            <h4 class="text-xl font-bold">Consultation</h4>
+            <p class="text-sm text-gray-500">
+              We learn what you want, take measurements, and note any drainage or grading concerns.
+            </p>
+          </div>
+
+          <div class="text-center space-y-4">
+            <div class="size-16 bg-primary text-background-dark text-2xl font-black rounded-full flex items-center justify-center mx-auto mb-6">
+              2
+            </div>
+            <h4 class="text-xl font-bold">Detailed Quote</h4>
+            <p class="text-sm text-gray-500">
+              You get clear options, honest recommendations, and straightforward pricing.
+            </p>
+          </div>
+
+          <div class="text-center space-y-4">
+            <div class="size-16 bg-primary text-background-dark text-2xl font-black rounded-full flex items-center justify-center mx-auto mb-6">
+              3
+            </div>
+            <h4 class="text-xl font-bold">Build / Maintain</h4>
+            <p class="text-sm text-gray-500">
+              Our crew completes the work with tight details and a clean job site.
+            </p>
+          </div>
+
+          <div class="text-center space-y-4">
+            <div class="size-16 bg-primary text-background-dark text-2xl font-black rounded-full flex items-center justify-center mx-auto mb-6">
+              4
+            </div>
+            <h4 class="text-xl font-bold">Final Walkthrough</h4>
+            <p class="text-sm text-gray-500">
+              We confirm everything looks right and answer questions on care and maintenance.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="py-24 bg-slate-custom text-white" id="gallery">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-black mb-4">Real Transformations. Real Results.</h2>
+          <p class="text-gray-400 italic">See the transformation of real homes in [City] and nearby areas.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
+          <div class="relative group rounded-2xl overflow-hidden shadow-2xl">
+            <div class="flex">
+              <div
+                class="w-1/2 h-80 bg-cover bg-center grayscale"
+                data-alt="old neglected backyard before landscaping"
+                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDjVaUYXtxiO8FiinZMqipHKnL9Yq9PbRRDgm2-0a32WV0vqjEvis718e4Yqi1MWLVviCRzD_m8db1x8QIvAz8iLp5QyqsY6eAh5lIRhzl-uHTZ3uBFupDJd7qbFi_Y1EkIulvQm3iu8oZxVYxgBOHUdhS2CLpQPKX3D3ubXNgRlVQbbrTbwBrnZrgux--aArcE2_sPFnQjywE5Gs55kWxv6aeKEVmeoTjxRiRt70_rPhS2Du9o6Ys1J07hfJL-ro0wiJsT5yjgMb9G');"
+              >
+                <span class="absolute top-4 left-4 bg-black/50 px-3 py-1 text-xs uppercase font-bold rounded"
+                  >Before</span
+                >
+              </div>
+              <div
+                class="w-1/2 h-80 bg-cover bg-center border-l-2 border-primary"
+                data-alt="transformed modern backyard with patio and lighting"
+                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCq1b8rixu3ifLPUc8xIFkzqszWqS1JK7fxmhmLxeZTyGLhG2RgezVqpBj3wTN70fzYxIuosUXcCQBd-P4LGuobK620D-9K__0ZUvLSclt9lla-AWbD_Qb7glOcOdfJibAvI2QtngR5g69wUVk8uVohtiTIrDWamM_qZwVoQASlXvkKRCZaDFiMZz8EGG_qq1Bs3nELmOmzLKSZLtruO7Cxi9r0GZ9N-c9Zuh5jvlrTFAasXEh-vx2fm1vwTCGZQfkqcOjcwCLKuu6Q');"
+              >
+                <span
+                  class="absolute top-4 right-4 bg-primary px-3 py-1 text-xs uppercase font-bold text-background-dark rounded"
+                  >After</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="relative group rounded-2xl overflow-hidden shadow-2xl">
+            <div class="flex">
+              <div
+                class="w-1/2 h-80 bg-cover bg-center grayscale"
+                data-alt="overgrown lawn before professional maintenance"
+                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDW68zLR0g9G3lY_qPYBP5CWAiiyZuM5mJQZhlBTfI2-UMCyIWVzbGhnKNAXj67G3iwZjIZUH-Rkr7Aa52PTs8QKKnIyDQ2H7aQ8p5SR-2onLrgdaStBVc-jb5Sji4S4BYfPpiJgLRvgPIhQNXucQAVox50baHTH8Po0dfEUxPYco2IL_zYWWHhMPHwUqraGNNmlSwFJXjr43j_TerRgsheJOhbrwi0oonxiZVVXlHOzN0LqGj9NbgAFy73-fcj419XmAHSJfxMlVMR');"
+              >
+                <span class="absolute top-4 left-4 bg-black/50 px-3 py-1 text-xs uppercase font-bold rounded"
+                  >Before</span
+                >
+              </div>
+              <div
+                class="w-1/2 h-80 bg-cover bg-center border-l-2 border-primary"
+                data-alt="perfectly edged and mowed lawn after maintenance"
+                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBTDLY9Ozku_O3AyuInkUfsmY4bJ142QASB_uV_BVN1AqinmtJTF3dZ9WyEdClYKa6Br42XY_BhYDuOtUZhR9nQvATxop9slXbUUoKaBR0XiMHnbsrfQdn1W9l9eYBg7DyzHu_6gEjt9lDkO3-xgDeLs_W50dc46Hqh0FvOqUJvwceyTYY1iJrSATEOqZ1DodXWZhbekolLmo6crWlQs8cIhumrJQHwUyqh3UZEWf83zskR_FsQsBgws7wlQStUetBLGeQ0kSh-_rq_');"
+              >
+                <span
+                  class="absolute top-4 right-4 bg-primary px-3 py-1 text-xs uppercase font-bold text-background-dark rounded"
+                  >After</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="max-w-4xl mx-auto">
+          <div class="text-center space-y-8">
+            <span class="material-symbols-outlined text-primary text-6xl">format_quote</span>
+            <p class="text-2xl font-medium leading-relaxed italic">
+              "The patio looks incredible and the yard finally drains properly. The crew showed up on time, kept
+              everything clean, and the final result came out better than we pictured. We’re already booking them for
+              spring cleanup."
+            </p>
+            <div>
+              <p class="font-black text-xl">[Customer Name]</p>
+              <p class="text-primary font-bold">[City], [State]</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICE AREA -->
+    <section class="py-24">
+      <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <h2 class="text-4xl font-black mb-8">Proudly Serving [City] &amp; Surrounding Areas</h2>
+          <div class="grid grid-cols-2 gap-y-4 gap-x-8">
+            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> [Suburb / Neighborhood 1]</div>
+            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> [Suburb / Neighborhood 2]</div>
+            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> [Suburb / Neighborhood 3]</div>
+            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> [Suburb / Neighborhood 4]</div>
+            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> [Suburb / Neighborhood 5]</div>
+            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> [Suburb / Neighborhood 6]</div>
+            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> [Suburb / Neighborhood 7]</div>
+            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> [Suburb / Neighborhood 8]</div>
+          </div>
+          <p class="mt-8 text-gray-500 italic">
+            Not sure if you’re in our service area? Call or request an estimate—we’ll confirm fast.
+          </p>
+        </div>
+
+        <div class="h-96 bg-gray-200 dark:bg-gray-800 rounded-3xl overflow-hidden relative shadow-inner border border-gray-100 dark:border-gray-700">
+          <div
+            class="absolute inset-0 bg-cover bg-center grayscale hover:grayscale-0 transition-all"
+            data-alt="map of [City] highlighting service areas"
+            data-location="[City]"
+            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCg0P9zK47YM4kziIfIjC-5jI5etlaT2iMJAjwPAZJV7Y8Ir-f9A4iOO1-KHmbHmpgnKMWL9pBy5BgxfP4ayBtq7MyWyXg6ulVmuC5QzXSq5vEbYbSOtoYdzbmGxjiK7qRq20sZ8bSKl1aPnAobvoAYdsUyBvZ0UlW4bKpH0kT4U1ER_ddA2DENzTw21pxsULKim2eq7SJcB23K7WV400vmvv2ZNtMB5IZrawTKIASUj_F0GgNl6UsC2kMvwz_NJ4iEbLEv-mq3rNNT');"
+          ></div>
+          <div class="absolute inset-0 bg-primary/10 pointer-events-none"></div>
+          <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white dark:bg-gray-900 px-6 py-4 rounded-xl shadow-xl border border-primary/30 flex items-center gap-3"
+          >
+            <span class="material-symbols-outlined text-primary fill-1">location_on</span>
+            <span class="font-black">Based in [City]</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-24 bg-white dark:bg-background-dark/80">
+      <div class="max-w-3xl mx-auto px-6">
+        <h2 class="text-4xl font-black text-center mb-12">Common Questions</h2>
+
+        <div class="space-y-4">
+          <details class="group bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden border border-gray-100 dark:border-gray-700">
+            <summary class="flex justify-between items-center p-6 cursor-pointer font-bold list-none">
+              How much does a typical project cost?
+              <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+            </summary>
+            <div class="px-6 pb-6 text-sm text-gray-500 leading-relaxed">
+              Pricing depends on your property size and the scope of work. Maintenance is often priced per visit or per month, while installations (like patios, drainage, or landscaping upgrades) vary by materials and layout. We provide a clear, written estimate after a walkthrough.
+            </div>
+          </details>
+
+          <details class="group bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden border border-gray-100 dark:border-gray-700">
+            <summary class="flex justify-between items-center p-6 cursor-pointer font-bold list-none">
+              Are you licensed and insured in [State]?
+              <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+            </summary>
+            <div class="px-6 pb-6 text-sm text-gray-500 leading-relaxed">
+              Yes—[Company Name] is licensed (when required) and fully insured. We’re happy to provide proof of insurance upon request.
+            </div>
+          </details>
+
+          <details class="group bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden border border-gray-100 dark:border-gray-700">
+            <summary class="flex justify-between items-center p-6 cursor-pointer font-bold list-none">
+              How long does an installation take?
+              <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+            </summary>
+            <div class="px-6 pb-6 text-sm text-gray-500 leading-relaxed">
+              Most projects can be completed in a few days to a couple weeks depending on scope, weather, and material availability. After the walkthrough, we’ll give you a realistic timeline and keep you updated.
+            </div>
+          </details>
+
+          <details class="group bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden border border-gray-100 dark:border-gray-700">
+            <summary class="flex justify-between items-center p-6 cursor-pointer font-bold list-none">
+              Do you offer a plant warranty?
+              <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+            </summary>
+            <div class="px-6 pb-6 text-sm text-gray-500 leading-relaxed">
+              Many plants and trees include a limited warranty when installed and maintained properly. We’ll explain care requirements and confirm warranty details in writing for your quote.
+            </div>
+          </details>
+
+          <details class="group bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden border border-gray-100 dark:border-gray-700">
+            <summary class="flex justify-between items-center p-6 cursor-pointer font-bold list-none">
+              What happens if it rains on a scheduled day?
+              <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+            </summary>
+            <div class="px-6 pb-6 text-sm text-gray-500 leading-relaxed">
+              If weather would affect safety or quality, we’ll notify you and reschedule for the next available clear day. Communication is always the priority.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="py-20 bg-primary/10 border-t border-primary/20">
+      <div class="max-w-7xl mx-auto px-6 text-center">
+        <h2 class="text-4xl lg:text-5xl font-black mb-8">Ready for a Yard You’re Proud Of?</h2>
+        <div class="flex flex-wrap justify-center gap-6">
+          <a
+            class="bg-primary text-background-dark px-10 py-5 rounded-2xl font-black text-xl hover:scale-105 transition-transform"
+            href="#quote"
+            >Get a Free Estimate</a
+          >
+          <a
+            class="bg-background-dark text-white px-10 py-5 rounded-2xl font-black text-xl flex items-center gap-3"
+            href="tel:8888888888"
+          >
+            <span class="material-symbols-outlined">call</span> Call [Phone Number]
+          </a>
+        </div>
+
+        <button
+          class="mt-12 text-sm font-bold uppercase tracking-widest text-gray-500 hover:text-primary transition-colors flex items-center gap-2 mx-auto"
+          onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+        >
+          <span class="material-symbols-outlined">arrow_upward</span> Back to Top
+        </button>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-background-dark text-white py-16 px-6">
+      <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+        <div class="flex items-center gap-2">
+          <div class="size-6 text-primary">
+            <svg fill="currentColor" viewBox="0 0 48 48">
+              <path
+                d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z"
+              ></path>
+            </svg>
+          </div>
+          <span class="text-lg font-extrabold tracking-tight">[COMPANY NAME]</span>
+        </div>
+
+        <div class="flex gap-8 text-sm text-gray-400">
+          <a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+          <a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+          <a class="hover:text-primary transition-colors" href="#">Employment</a>
+        </div>
+
+        <p class="text-xs text-gray-500">© [Year] [Company Name]. All rights reserved. Locally owned in [City, State].</p>
+      </div>
+    </footer>
+  </body>
+</html>

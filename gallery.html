@@ -1,1 +1,731 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>[Company Name] | Project Gallery</title>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#11d452",
+              "background-light": "#f6f8f6",
+              "background-dark": "#102216",
+            },
+            fontFamily: {
+              display: ["Manrope", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+      body {
+        font-family: "Manrope", sans-serif;
+      }
+
+      /* Masonry (simple, no library) */
+      .masonry {
+        column-gap: 1.5rem; /* matches gap-6 */
+      }
+      .masonry-item {
+        break-inside: avoid;
+        -webkit-column-break-inside: avoid;
+        margin-bottom: 1.5rem; /* matches gap-6 */
+      }
+
+      /* Lightbox */
+      .lb-hidden {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body class="bg-background-light dark:bg-background-dark text-[#0d1b12] dark:text-white transition-colors duration-300">
+    <!-- Header -->
+    <header class="border-b border-solid border-[#e7f3eb] dark:border-[#1a3321] bg-background-light dark:bg-background-dark px-6 md:px-20 py-4">
+      <div class="max-w-[1280px] mx-auto flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="size-8 text-primary">
+            <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z"
+                fill="currentColor"
+              ></path>
+            </svg>
+          </div>
+          <h2 class="text-xl font-extrabold tracking-tight">[Company Name]</h2>
+        </div>
+
+        <nav class="hidden md:flex items-center gap-8">
+          <a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Home</a>
+          <a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Services</a>
+          <a class="text-sm font-semibold hover:text-primary transition-colors" href="#">About</a>
+          <a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Contact</a>
+          <a class="bg-primary hover:bg-primary/90 text-[#0d1b12] px-5 py-2 rounded-lg font-bold text-sm transition-all shadow-sm" href="#cta">
+            Get a Free Quote
+          </a>
+        </nav>
+
+        <button class="md:hidden p-2" aria-label="Open menu">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section
+        class="relative h-[60vh] min-h-[420px] flex items-center justify-center bg-cover bg-center"
+        data-alt="Luxury manicured estate garden with fountain"
+        style='background-image: linear-gradient(rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.82) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCrqoW0p1AOj-Ai8xa3OF-Zyv4RnP3aGIowIkzcsQAdc0gHgSqQOEuM_vLArHWWR4TWrqI5KGQaIdE8JJ_PH38b4uVjQmqql9TJytuS8vxiInQ8EMJGS-dFsO1HnBxK0ZMV-_RL_Wdj4bT39K0CalVMErj-CnzddHeWL9fajaiqGs2q271ITp1luhyBZ_URIz0e8q7z5HqCD8gKXT-Yj9erh8RBAMzzd46JpsnFjeQOzct4ryHiZ353iAxNs75r2Cs-c3qPZomzLdC3");'
+      >
+        <div class="max-w-[920px] px-6 text-center text-white">
+          <span class="inline-block bg-white/10 border border-white/20 rounded-full px-4 py-1 text-xs font-bold uppercase tracking-widest mb-5">
+            Before &amp; After Transformations
+          </span>
+          <h1 class="text-4xl md:text-6xl font-black mb-6 tracking-tight leading-[1.1]">Project Gallery</h1>
+          <p class="text-lg md:text-xl font-medium text-white/90 mb-8 max-w-2xl mx-auto">
+            A few recent outdoor upgrades across the [City] area—built with clean details, durable materials, and a focus on curb appeal.
+          </p>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a class="bg-primary text-[#0d1b12] px-8 py-3 rounded-lg font-bold text-base hover:scale-105 transition-transform" href="#projects">
+              View Projects
+            </a>
+            <a class="bg-white/10 border border-white/20 text-white px-8 py-3 rounded-lg font-bold text-base hover:bg-white/15 transition-all" href="#cta">
+              Get a Free Quote
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Simple Intro -->
+      <section class="max-w-[1280px] mx-auto px-6 py-14">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+          <div>
+            <h2 class="text-3xl md:text-4xl font-black tracking-tight mb-4">Real Work. Real Results.</h2>
+            <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+              Homeowners want proof. Here are a few examples of the kind of transformations we deliver—clean job sites, clear communication,
+              and results that make your yard look “finished.”
+            </p>
+          </div>
+
+          <div class="bg-white dark:bg-[#1a3321] border border-[#e7f3eb] dark:border-[#1a3321] rounded-xl p-6 shadow-sm">
+            <div class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-primary text-3xl">verified</span>
+              <div>
+                <p class="font-bold">Want something similar at your home?</p>
+                <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                  Request a free estimate—most customers hear back within 1 business day.
+                </p>
+                <div class="mt-4 flex flex-col sm:flex-row gap-3">
+                  <a class="bg-primary text-[#0d1b12] px-6 py-3 rounded-lg font-black text-sm hover:scale-105 transition-transform text-center" href="#cta">
+                    Start My Estimate
+                  </a>
+                  <a
+                    class="border-2 border-[#cfe7d7] dark:border-[#1a3321] px-6 py-3 rounded-lg font-black text-sm hover:bg-white dark:hover:bg-[#1a3321] transition-all text-center"
+                    href="tel:8888888888"
+                  >
+                    Call [Phone Number]
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section class="max-w-[1280px] mx-auto px-6 pb-16" id="projects">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <!-- Project Card 1 -->
+          <article class="overflow-hidden rounded-xl bg-white dark:bg-[#1a3321] shadow-md hover:shadow-xl transition-all duration-500 border border-[#e7f3eb] dark:border-[#1a3321]">
+            <div class="p-5 border-b border-[#e7f3eb] dark:border-[#245034]">
+              <div class="flex items-start justify-between gap-4">
+                <div>
+                  <h3 class="text-lg font-black leading-tight">[Project Name] — Patio + Fire Feature</h3>
+                  <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">
+                    <span class="inline-flex items-center">
+                      <span class="material-symbols-outlined text-base mr-1">location_on</span>
+                      [Location], [State]
+                    </span>
+                  </p>
+                </div>
+                <span class="bg-primary/20 text-primary px-2 py-1 rounded text-[10px] font-black uppercase tracking-tighter whitespace-nowrap">Hardscaping</span>
+              </div>
+              <p class="text-sm text-gray-600 dark:text-gray-400 mt-3">
+                Replaced a worn, uneven space with a clean paver patio and a cozy focal point for year-round gatherings.
+              </p>
+            </div>
+
+            <div class="grid grid-cols-2 gap-0">
+              <!-- Before (clickable) -->
+              <button
+                type="button"
+                class="relative text-left focus:outline-none"
+                aria-label="Open before photo"
+                data-lightbox
+                data-src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjVaUYXtxiO8FiinZMqipHKnL9Yq9PbRRDgm2-0a32WV0vqjEvis718e4Yqi1MWLVviCRzD_m8db1x8QIvAz8iLp5QyqsY6eAh5lIRhzl-uHTZ3uBFupDJd7qbFi_Y1EkIulvQm3iu8oZxVYxgBOHUdhS2CLpQPKX3D3ubXNgRlVQbbrTbwBrnZrgux--aArcE2_sPFnQjywE5Gs55kWxv6aeKEVmeoTjxRiRt70_rPhS2Du9o6Ys1J07hfJL-ro0wiJsT5yjgMb9G"
+                data-caption="[Project Name] — Before"
+              >
+                <div
+                  class="aspect-[4/3] w-full bg-cover bg-center"
+                  data-alt="Before photo of patio project"
+                  style='background-image:url("https://lh3.googleusercontent.com/aida-public/AB6AXuDjVaUYXtxiO8FiinZMqipHKnL9Yq9PbRRDgm2-0a32WV0vqjEvis718e4Yqi1MWLVviCRzD_m8db1x8QIvAz8iLp5QyqsY6eAh5lIRhzl-uHTZ3uBFupDJd7qbFi_Y1EkIulvQm3iu8oZxVYxgBOHUdhS2CLpQPKX3D3ubXNgRlVQbbrTbwBrnZrgux--aArcE2_sPFnQjywE5Gs55kWxv6aeKEVmeoTjxRiRt70_rPhS2Du9o6Ys1J07hfJL-ro0wiJsT5yjgMb9G");'
+                ></div>
+                <span class="absolute top-3 left-3 bg-black/55 text-white px-3 py-1 text-[11px] font-black uppercase tracking-widest rounded">Before</span>
+                <span class="absolute bottom-3 left-3 text-white/90 text-[11px] font-bold bg-black/35 px-2 py-1 rounded">Click to expand</span>
+              </button>
+
+              <!-- After (clickable) -->
+              <button
+                type="button"
+                class="relative text-left border-l border-[#e7f3eb] dark:border-[#245034] focus:outline-none"
+                aria-label="Open after photo"
+                data-lightbox
+                data-src="https://lh3.googleusercontent.com/aida-public/AB6AXuCq1b8rixu3ifLPUc8xIFkzqszWqS1JK7fxmhmLxeZTyGLhG2RgezVqpBj3wTN70fzYxIuosUXcCQBd-P4LGuobK620D-9K__0ZUvLSclt9lla-AWbD_Qb7glOcOdfJibAvI2QtngR5g69wUVk8uVohtiTIrDWamM_qZwVoQASlXvkKRCZaDFiMZz8EGG_qq1Bs3nELmOmzLKSZLtruO7Cxi9r0GZ9N-c9Zuh5jvlrTFAasXEh-vx2fm1vwTCGZQfkqcOjcwCLKuu6Q"
+                data-caption="[Project Name] — After"
+              >
+                <div
+                  class="aspect-[4/3] w-full bg-cover bg-center"
+                  data-alt="After photo of patio project"
+                  style='background-image:url("https://lh3.googleusercontent.com/aida-public/AB6AXuCq1b8rixu3ifLPUc8xIFkzqszWqS1JK7fxmhmLxeZTyGLhG2RgezVqpBj3wTN70fzYxIuosUXcCQBd-P4LGuobK620D-9K__0ZUvLSclt9lla-AWbD_Qb7glOcOdfJibAvI2QtngR5g69wUVk8uVohtiTIrDWamM_qZwVoQASlXvkKRCZaDFiMZz8EGG_qq1Bs3nELmOmzLKSZLtruO7Cxi9r0GZ9N-c9Zuh5jvlrTFAasXEh-vx2fm1vwTCGZQfkqcOjcwCLKuu6Q");'
+                ></div>
+                <span class="absolute top-3 right-3 bg-primary text-[#0d1b12] px-3 py-1 text-[11px] font-black uppercase tracking-widest rounded">After</span>
+                <span class="absolute bottom-3 right-3 text-[#0d1b12] text-[11px] font-bold bg-primary/70 px-2 py-1 rounded">Click to expand</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Project Card 2 -->
+          <article class="overflow-hidden rounded-xl bg-white dark:bg-[#1a3321] shadow-md hover:shadow-xl transition-all duration-500 border border-[#e7f3eb] dark:border-[#1a3321]">
+            <div class="p-5 border-b border-[#e7f3eb] dark:border-[#245034]">
+              <div class="flex items-start justify-between gap-4">
+                <div>
+                  <h3 class="text-lg font-black leading-tight">[Project Name] — Landscape Bed Refresh</h3>
+                  <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">
+                    <span class="inline-flex items-center">
+                      <span class="material-symbols-outlined text-base mr-1">location_on</span>
+                      [Location], [State]
+                    </span>
+                  </p>
+                </div>
+                <span class="bg-primary/20 text-primary px-2 py-1 rounded text-[10px] font-black uppercase tracking-tighter whitespace-nowrap">Beds &amp; Planting</span>
+              </div>
+              <p class="text-sm text-gray-600 dark:text-gray-400 mt-3">
+                Cleaned out overgrowth, redefined bed lines, added fresh mulch, and installed new low-maintenance plants for curb appeal.
+              </p>
+            </div>
+
+            <div class="grid grid-cols-2 gap-0">
+              <!-- Before (clickable) -->
+              <button
+                type="button"
+                class="relative text-left focus:outline-none"
+                aria-label="Open before photo"
+                data-lightbox
+                data-src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1FwcTwLs0Q5UM2ShI7se6QKBzW62MYhVeceevmDxj4KqVcgFmaUoUWp7YR2x4hvpLdKbqhCb8S816mZc44z86y64nlKSUHpK3CD7wRBNQ0L2EJea5Z4gNYWBxxSCCJ0rRaCL25IVjopy4o9iFxpG_ZxRQfv2R9Y3xyWgTQ4RktQ2TtC--e8yrsrSVA3yHdFYBDOxLSF-pvkOLa1TtSEM_P9B0ik0NkjcTkfdtxZeF7i9UJFscUIqgi3X3OmMiTy4V6m2GNuloKn6g"
+                data-caption="[Project Name] — Before"
+              >
+                <div
+                  class="aspect-[4/3] w-full bg-cover bg-center"
+                  data-alt="Before photo of landscape bed project"
+                  style='background-image:url("https://lh3.googleusercontent.com/aida-public/AB6AXuA1FwcTwLs0Q5UM2ShI7se6QKBzW62MYhVeceevmDxj4KqVcgFmaUoUWp7YR2x4hvpLdKbqhCb8S816mZc44z86y64nlKSUHpK3CD7wRBNQ0L2EJea5Z4gNYWBxxSCCJ0rRaCL25IVjopy4o9iFxpG_ZxRQfv2R9Y3xyWgTQ4RktQ2TtC--e8yrsrSVA3yHdFYBDOxLSF-pvkOLa1TtSEM_P9B0ik0NkjcTkfdtxZeF7i9UJFscUIqgi3X3OmMiTy4V6m2GNuloKn6g");'
+                ></div>
+                <span class="absolute top-3 left-3 bg-black/55 text-white px-3 py-1 text-[11px] font-black uppercase tracking-widest rounded">Before</span>
+                <span class="absolute bottom-3 left-3 text-white/90 text-[11px] font-bold bg-black/35 px-2 py-1 rounded">Click to expand</span>
+              </button>
+
+              <!-- After (clickable) -->
+              <button
+                type="button"
+                class="relative text-left border-l border-[#e7f3eb] dark:border-[#245034] focus:outline-none"
+                aria-label="Open after photo"
+                data-lightbox
+                data-src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPW2xDiu0zD7YQ7VnsAuxfVqc2Uuj2qecnFMEtpdGBN7qmTm3majn2gp9BmY5sEjULaMrhrYd7vVDOK_lPxsYADIgwMbmirMv1pVtuw0an8Nb0KNTgioPOVxkO1ulzsSObWHEaoWIDNigYGEK7gWasKWHjFmN4lwtVFDPUe9T4Uup0-zeP_EKWjNYvpxhQZK937jJD37U3olXu3TolA0oSFD2E0g32GG_YweWrp2BNaV8ojVqLtfagozkHCJtJTC33ZSnJe42bRV0k"
+                data-caption="[Project Name] — After"
+              >
+                <div
+                  class="aspect-[4/3] w-full bg-cover bg-center"
+                  data-alt="After photo of landscape bed project"
+                  style='background-image:url("https://lh3.googleusercontent.com/aida-public/AB6AXuDPW2xDiu0zD7YQ7VnsAuxfVqc2Uuj2qecnFMEtpdGBN7qmTm3majn2gp9BmY5sEjULaMrhrYd7vVDOK_lPxsYADIgwMbmirMv1pVtuw0an8Nb0KNTgioPOVxkO1ulzsSObWHEaoWIDNigYGEK7gWasKWHjFmN4lwtVFDPUe9T4Uup0-zeP_EKWjNYvpxhQZK937jJD37U3olXu3TolA0oSFD2E0g32GG_YweWrp2BNaV8ojVqLtfagozkHCJtJTC33ZSnJe42bRV0k");'
+                ></div>
+                <span class="absolute top-3 right-3 bg-primary text-[#0d1b12] px-3 py-1 text-[11px] font-black uppercase tracking-widest rounded">After</span>
+                <span class="absolute bottom-3 right-3 text-[#0d1b12] text-[11px] font-bold bg-primary/70 px-2 py-1 rounded">Click to expand</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Project Card 3 -->
+          <article class="overflow-hidden rounded-xl bg-white dark:bg-[#1a3321] shadow-md hover:shadow-xl transition-all duration-500 border border-[#e7f3eb] dark:border-[#1a3321]">
+            <div class="p-5 border-b border-[#e7f3eb] dark:border-[#245034]">
+              <div class="flex items-start justify-between gap-4">
+                <div>
+                  <h3 class="text-lg font-black leading-tight">[Project Name] — Lawn Renovation</h3>
+                  <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">
+                    <span class="inline-flex items-center">
+                      <span class="material-symbols-outlined text-base mr-1">location_on</span>
+                      [Location], [State]
+                    </span>
+                  </p>
+                </div>
+                <span class="bg-primary/20 text-primary px-2 py-1 rounded text-[10px] font-black uppercase tracking-tighter whitespace-nowrap">Lawns</span>
+              </div>
+              <p class="text-sm text-gray-600 dark:text-gray-400 mt-3">
+                Improved grading, installed new sod, and cleaned edges for a thicker, greener lawn with a crisp, finished look.
+              </p>
+            </div>
+
+            <div class="grid grid-cols-2 gap-0">
+              <!-- Before (clickable) -->
+              <button
+                type="button"
+                class="relative text-left focus:outline-none"
+                aria-label="Open before photo"
+                data-lightbox
+                data-src="https://lh3.googleusercontent.com/aida-public/AB6AXuDW68zLR0g9G3lY_qPYBP5CWAiiyZuM5mJQZhlBTfI2-UMCyIWVzbGhnKNAXj67G3iwZjIZUH-Rkr7Aa52PTs8QKKnIyDQ2H7aQ8p5SR-2onLrgdaStBVc-jb5Sji4S4BYfPpiJgLRvgPIhQNXucQAVox50baHTH8Po0dfEUxPYco2IL_zYWWHhMPHwUqraGNNmlSwFJXjr43j_TerRgsheJOhbrwi0oonxiZVVXlHOzN0LqGj9NbgAFy73-fcj419XmAHSJfxMlVMR"
+                data-caption="[Project Name] — Before"
+              >
+                <div
+                  class="aspect-[4/3] w-full bg-cover bg-center"
+                  data-alt="Before photo of lawn renovation project"
+                  style='background-image:url("https://lh3.googleusercontent.com/aida-public/AB6AXuDW68zLR0g9G3lY_qPYBP5CWAiiyZuM5mJQZhlBTfI2-UMCyIWVzbGhnKNAXj67G3iwZjIZUH-Rkr7Aa52PTs8QKKnIyDQ2H7aQ8p5SR-2onLrgdaStBVc-jb5Sji4S4BYfPpiJgLRvgPIhQNXucQAVox50baHTH8Po0dfEUxPYco2IL_zYWWHhMPHwUqraGNNmlSwFJXjr43j_TerRgsheJOhbrwi0oonxiZVVXlHOzN0LqGj9NbgAFy73-fcj419XmAHSJfxMlVMR");'
+                ></div>
+                <span class="absolute top-3 left-3 bg-black/55 text-white px-3 py-1 text-[11px] font-black uppercase tracking-widest rounded">Before</span>
+                <span class="absolute bottom-3 left-3 text-white/90 text-[11px] font-bold bg-black/35 px-2 py-1 rounded">Click to expand</span>
+              </button>
+
+              <!-- After (clickable) -->
+              <button
+                type="button"
+                class="relative text-left border-l border-[#e7f3eb] dark:border-[#245034] focus:outline-none"
+                aria-label="Open after photo"
+                data-lightbox
+                data-src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2fJRsx8IO5Cm-igJZzu8NrYRi_i-H79MgAtvMlgOwX8HlgTy9f1FLhqGAXM6zNAC20yFWzc4NImnkRhLZ7PnoR0F4qqq873L4YV1VgvK0kURsrDYhn33-0UUa3TIV1qY8XU4gDe6SeRPsHEzrPM5H6Io5Nw4ihWym69cnwRHUabZiFDYBFTO_cbjIrr8ja8258-yMkIezpRr4oHJ4FVOn_gdJcz_ABtqwSZQ1NapnueKIaeeE7K5vY0Vse0Xa1Jr88VYSfytr-oZF"
+                data-caption="[Project Name] — After"
+              >
+                <div
+                  class="aspect-[4/3] w-full bg-cover bg-center"
+                  data-alt="After photo of lawn renovation project"
+                  style='background-image:url("https://lh3.googleusercontent.com/aida-public/AB6AXuC2fJRsx8IO5Cm-igJZzu8NrYRi_i-H79MgAtvMlgOwX8HlgTy9f1FLhqGAXM6zNAC20yFWzc4NImnkRhLZ7PnoR0F4qqq873L4YV1VgvK0kURsrDYhn33-0UUa3TIV1qY8XU4gDe6SeRPsHEzrPM5H6Io5Nw4ihWym69cnwRHUabZiFDYBFTO_cbjIrr8ja8258-yMkIezpRr4oHJ4FVOn_gdJcz_ABtqwSZQ1NapnueKIaeeE7K5vY0Vse0Xa1Jr88VYSfytr-oZF");'
+                ></div>
+                <span class="absolute top-3 right-3 bg-primary text-[#0d1b12] px-3 py-1 text-[11px] font-black uppercase tracking-widest rounded">After</span>
+                <span class="absolute bottom-3 right-3 text-[#0d1b12] text-[11px] font-bold bg-primary/70 px-2 py-1 rounded">Click to expand</span>
+              </button>
+            </div>
+          </article>
+        </div>
+
+        <!-- More Work (Masonry + Load More) -->
+        <section class="mt-14">
+          <div class="text-center max-w-2xl mx-auto mb-8">
+            <h2 class="text-2xl md:text-3xl font-black tracking-tight">More Work We’re Proud Of</h2>
+            <p class="text-gray-600 dark:text-gray-400 mt-2">
+              Extra snapshots from projects across the area—same crew, same standards, same attention to detail.
+            </p>
+          </div>
+
+          <div class="text-center">
+            <button
+              id="toggleMoreWorkBtn"
+              class="border-2 border-[#cfe7d7] dark:border-[#1a3321] px-10 py-3 rounded-lg font-bold hover:bg-white dark:hover:bg-[#1a3321] hover:border-primary transition-all inline-flex items-center gap-2"
+              type="button"
+            >
+              <span class="material-symbols-outlined text-base">expand_more</span>
+              Load More Photos
+            </button>
+          </div>
+
+          <!-- Hidden masonry grid -->
+          <div id="moreWorkGrid" class="lb-hidden mt-10">
+            <!-- columns: 1 (mobile), 2 (sm), 3 (lg) -->
+            <div class="masonry columns-1 sm:columns-2 lg:columns-3">
+              <!-- 12 masonry items (single images) -->
+              <article class="masonry-item rounded-xl overflow-hidden bg-white dark:bg-[#1a3321] border border-[#e7f3eb] dark:border-[#245034] shadow-sm hover:shadow-lg transition-all">
+                <button type="button" class="w-full text-left" data-lightbox data-src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=2400&q=80" data-caption="Landscape Bed Install">
+                  <img
+                    class="w-full h-auto object-cover"
+                    src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1600&q=80"
+                    alt="Landscape bed install"
+                    loading="lazy"
+                  />
+                </button>
+                <div class="p-4">
+                  <p class="text-sm font-bold">Landscape Bed Install</p>
+                  <p class="text-xs text-gray-500 dark:text-gray-400">Mulch • Planting • Edging</p>
+                </div>
+              </article>
+
+              <article class="masonry-item rounded-xl overflow-hidden bg-white dark:bg-[#1a3321] border border-[#e7f3eb] dark:border-[#245034] shadow-sm hover:shadow-lg transition-all">
+                <button type="button" class="w-full text-left" data-lightbox data-src="https://images.unsplash.com/photo-1560743641-3914f2c45636?auto=format&fit=crop&w=2400&q=80" data-caption="Paver Patio">
+                  <img
+                    class="w-full h-auto object-cover"
+                    src="https://images.unsplash.com/photo-1560743641-3914f2c45636?auto=format&fit=crop&w=1600&q=80"
+                    alt="Paver patio"
+                    loading="lazy"
+                  />
+                </button>
+                <div class="p-4">
+                  <p class="text-sm font-bold">Paver Patio</p>
+                  <p class="text-xs text-gray-500 dark:text-gray-400">Patios • Walkways</p>
+                </div>
+              </article>
+
+              <article class="masonry-item rounded-xl overflow-hidden bg-white dark:bg-[#1a3321] border border-[#e7f3eb] dark:border-[#245034] shadow-sm hover:shadow-lg transition-all">
+                <button type="button" class="w-full text-left" data-lightbox data-src="https://images.unsplash.com/photo-1615876234886-fd9a39fda97f?auto=format&fit=crop&w=2400&q=80" data-caption="Outdoor Lighting">
+                  <img
+                    class="w-full h-auto object-cover"
+                    src="https://images.unsplash.com/photo-1615876234886-fd9a39fda97f?auto=format&fit=crop&w=1600&q=80"
+                    alt="Outdoor lighting"
+                    loading="lazy"
+                  />
+                </button>
+                <div class="p-4">
+                  <p class="text-sm font-bold">Outdoor Lighting</p>
+                  <p class="text-xs text-gray-500 dark:text-gray-400">Path • Uplighting</p>
+                </div>
+              </article>
+
+              <article class="masonry-item rounded-xl overflow-hidden bg-white dark:bg-[#1a3321] border border-[#e7f3eb] dark:border-[#245034] shadow-sm hover:shadow-lg transition-all">
+                <button type="button" class="w-full text-left" data-lightbox data-src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=2400&q=80" data-caption="Lawn Refresh">
+                  <img
+                    class="w-full h-auto object-cover"
+                    src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1600&q=80"
+                    alt="Lawn refresh"
+                    loading="lazy"
+                  />
+                </button>
+                <div class="p-4">
+                  <p class="text-sm font-bold">Lawn Refresh</p>
+                  <p class="text-xs text-gray-500 dark:text-gray-400">Mowing • Cleanup</p>
+                </div>
+              </article>
+
+              <article class="masonry-item rounded-xl overflow-hidden bg-white dark:bg-[#1a3321] border border-[#e7f3eb] dark:border-[#245034] shadow-sm hover:shadow-lg transition-all">
+                <button type="button" class="w-full text-left" data-lightbox data-src="https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?auto=format&fit=crop&w=2400&q=80" data-caption="Retaining Wall">
+                  <img
+                    class="w-full h-auto object-cover"
+                    src="https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?auto=format&fit=crop&w=1600&q=80"
+                    alt="Retaining wall"
+                    loading="lazy"
+                  />
+                </button>
+                <div class="p-4">
+                  <p class="text-sm font-bold">Retaining Wall</p>
+                  <p class="text-xs text-gray-500 dark:text-gray-400">Drainage • Grade Control</p>
+                </div>
+              </article>
+
+              <article class="masonry-item rounded-xl overflow-hidden bg-white dark:bg-[#1a3321] border border-[#e7f3eb] dark:border-[#245034] shadow-sm hover:shadow-lg transition-all">
+                <button type="button" class="w-full text-left" data-lightbox data-src="https://images.unsplash.com/photo-1496307653780-42ee777d4833?auto=format&fit=crop&w=2400&q=80" data-caption="Front Entry Upgrade">
+                  <img
+                    class="w-full h-auto object-cover"
+                    src="https://images.unsplash.com/photo-1496307653780-42ee777d4833?auto=format&fit=crop&w=1600&q=80"
+                    alt="Front entry upgrade"
+                    loading="lazy"
+                  />
+                </button>
+                <div class="p-4">
+                  <p class="text-sm font-bold">Front Entry Upgrade</p>
+                  <p class="text-xs text-gray-500 dark:text-gray-400">Curb Appeal</p>
+                </div>
+              </article>
+
+              <article class="masonry-item rounded-xl overflow-hidden bg-white dark:bg-[#1a3321] border border-[#e7f3eb] dark:border-[#245034] shadow-sm hover:shadow-lg transition-all">
+                <button type="button" class="w-full text-left" data-lightbox data-src="https://images.unsplash.com/photo-1505904267569-1b63a417e5d4?auto=format&fit=crop&w=2400&q=80" data-caption="Seasonal Cleanup">
+                  <img
+                    class="w-full h-auto object-cover"
+                    src="https://images.unsplash.com/photo-1505904267569-1b63a417e5d4?auto=format&fit=crop&w=1600&q=80"
+                    alt="Seasonal cleanup"
+                    loading="lazy"
+                  />
+                </button>
+                <div class="p-4">
+                  <p class="text-sm font-bold">Seasonal Cleanup</p>
+                  <p class="text-xs text-gray-500 dark:text-gray-400">Spring • Fall</p>
+                </div>
+              </article>
+
+              <article class="masonry-item rounded-xl overflow-hidden bg-white dark:bg-[#1a3321] border border-[#e7f3eb] dark:border-[#245034] shadow-sm hover:shadow-lg transition-all">
+                <button type="button" class="w-full text-left" data-lightbox data-src="https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=2400&q=80" data-caption="Drainage Work">
+                  <img
+                    class="w-full h-auto object-cover"
+                    src="https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=1600&q=80"
+                    alt="Drainage work"
+                    loading="lazy"
+                  />
+                </button>
+                <div class="p-4">
+                  <p class="text-sm font-bold">Drainage Work</p>
+                  <p class="text-xs text-gray-500 dark:text-gray-400">French Drain • Grading</p>
+                </div>
+              </article>
+
+              <article class="masonry-item rounded-xl overflow-hidden bg-white dark:bg-[#1a3321] border border-[#e7f3eb] dark:border-[#245034] shadow-sm hover:shadow-lg transition-all">
+                <button type="button" class="w-full text-left" data-lightbox data-src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=2400&q=80" data-caption="Mulch Refresh">
+                  <img
+                    class="w-full h-auto object-cover"
+                    src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80"
+                    alt="Mulch refresh"
+                    loading="lazy"
+                  />
+                </button>
+                <div class="p-4">
+                  <p class="text-sm font-bold">Mulch Refresh</p>
+                  <p class="text-xs text-gray-500 dark:text-gray-400">Clean Lines • Fresh Color</p>
+                </div>
+              </article>
+
+              <article class="masonry-item rounded-xl overflow-hidden bg-white dark:bg-[#1a3321] border border-[#e7f3eb] dark:border-[#245034] shadow-sm hover:shadow-lg transition-all">
+                <button type="button" class="w-full text-left" data-lightbox data-src="https://images.unsplash.com/photo-1523413451832-0b61a78f7a1b?auto=format&fit=crop&w=2400&q=80" data-caption="Walkway Upgrade">
+                  <img
+                    class="w-full h-auto object-cover"
+                    src="https://images.unsplash.com/photo-1523413451832-0b61a78f7a1b?auto=format&fit=crop&w=1600&q=80"
+                    alt="Walkway upgrade"
+                    loading="lazy"
+                  />
+                </button>
+                <div class="p-4">
+                  <p class="text-sm font-bold">Walkway Upgrade</p>
+                  <p class="text-xs text-gray-500 dark:text-gray-400">Pavers • Stone</p>
+                </div>
+              </article>
+
+              <article class="masonry-item rounded-xl overflow-hidden bg-white dark:bg-[#1a3321] border border-[#e7f3eb] dark:border-[#245034] shadow-sm hover:shadow-lg transition-all">
+                <button type="button" class="w-full text-left" data-lightbox data-src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=2400&q=80" data-caption="Outdoor Living Touches">
+                  <img
+                    class="w-full h-auto object-cover"
+                    src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80"
+                    alt="Outdoor living touches"
+                    loading="lazy"
+                  />
+                </button>
+                <div class="p-4">
+                  <p class="text-sm font-bold">Outdoor Living Touches</p>
+                  <p class="text-xs text-gray-500 dark:text-gray-400">Stone • Lighting • Beds</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <!-- Final CTA Section -->
+      <section class="bg-background-dark text-white py-20 overflow-hidden relative" id="cta">
+        <div class="absolute top-0 right-0 w-1/3 h-full opacity-10 pointer-events-none">
+          <svg class="w-full h-full" fill="currentColor" viewBox="0 0 100 100">
+            <circle cx="100" cy="50" r="40"></circle>
+          </svg>
+        </div>
+
+        <div class="max-w-[1280px] mx-auto px-6 relative z-10">
+          <div class="max-w-[720px]">
+            <h2 class="text-3xl md:text-5xl font-black mb-6 leading-tight">
+              Want Results Like These? <br />
+              <span class="text-primary">Get a Free Quote</span>
+            </h2>
+            <p class="text-lg text-gray-400 mb-10 max-w-lg">
+              Tell us what you want to improve—patio, beds, drainage, lighting, or maintenance—and we’ll give you clear pricing and next steps.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a class="bg-primary text-[#0d1b12] px-8 py-4 rounded-lg font-black text-lg hover:scale-105 transition-transform flex items-center justify-center" href="#">
+                Start Your Estimate
+              </a>
+              <a class="border-2 border-white/20 hover:border-white text-white px-8 py-4 rounded-lg font-black text-lg flex items-center justify-center transition-all group" href="tel:8888888888">
+                <span class="material-symbols-outlined mr-2 group-hover:scale-110 transition-transform">call</span>
+                [Phone Number]
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-background-light dark:bg-[#0a160e] py-12 border-t border-[#e7f3eb] dark:border-[#1a3321]">
+      <div class="max-w-[1280px] mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
+        <div class="col-span-1 md:col-span-1">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="size-6 text-primary">
+              <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </div>
+            <h2 class="text-lg font-extrabold">[Company Name]</h2>
+          </div>
+          <p class="text-sm text-gray-500 dark:text-gray-400 mb-6">
+            Premium outdoor living solutions for the modern home—design-forward work, durable installs, and clean job sites.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-bold mb-6 text-sm uppercase tracking-widest text-primary">Services</h4>
+          <ul class="space-y-4 text-sm text-gray-500 dark:text-gray-400">
+            <li><a class="hover:text-primary transition-colors" href="#">Landscape Design</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#">Hardscaping</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#">Lawn Care</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#">Drainage</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-bold mb-6 text-sm uppercase tracking-widest text-primary">Company</h4>
+          <ul class="space-y-4 text-sm text-gray-500 dark:text-gray-400">
+            <li><a class="hover:text-primary transition-colors" href="#">About Us</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#">Project Gallery</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#">Contact</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-bold mb-6 text-sm uppercase tracking-widest text-primary">Connect</h4>
+          <div class="flex gap-4">
+            <a class="size-10 rounded-lg bg-[#e7f3eb] dark:bg-[#1a3321] flex items-center justify-center hover:bg-primary hover:text-white transition-all" href="#">
+              <span class="material-symbols-outlined">public</span>
+            </a>
+            <a class="size-10 rounded-lg bg-[#e7f3eb] dark:bg-[#1a3321] flex items-center justify-center hover:bg-primary hover:text-white transition-all" href="#">
+              <span class="material-symbols-outlined">camera</span>
+            </a>
+            <a class="size-10 rounded-lg bg-[#e7f3eb] dark:bg-[#1a3321] flex items-center justify-center hover:bg-primary hover:text-white transition-all" href="#">
+              <span class="material-symbols-outlined">alternate_email</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="max-w-[1280px] mx-auto px-6 mt-12 pt-8 border-t border-[#e7f3eb] dark:border-[#1a3321] text-xs text-gray-500 dark:text-gray-600 flex flex-col md:flex-row justify-between items-center gap-4"
+      >
+        <p>© [Year] [Company Name]. All rights reserved.</p>
+        <div class="flex gap-6">
+          <a class="hover:text-primary" href="#">Privacy Policy</a>
+          <a class="hover:text-primary" href="#">Terms of Service</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lb-hidden fixed inset-0 z-[999]">
+      <!-- Backdrop -->
+      <div id="lightboxBackdrop" class="absolute inset-0 bg-black/80 backdrop-blur-sm"></div>
+
+      <!-- Content -->
+      <div class="relative z-10 w-full h-full flex items-center justify-center p-4">
+        <div class="max-w-5xl w-full">
+          <div class="flex items-center justify-between mb-3">
+            <p id="lightboxCaption" class="text-white/90 text-sm font-semibold"></p>
+            <button
+              id="lightboxClose"
+              type="button"
+              class="text-white/90 hover:text-white inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-white/10 border border-white/10"
+              aria-label="Close image"
+            >
+              <span class="material-symbols-outlined text-base">close</span>
+              Close
+            </button>
+          </div>
+
+          <div class="rounded-2xl overflow-hidden border border-white/10 bg-black">
+            <img id="lightboxImg" src="" alt="Expanded project photo" class="w-full h-auto object-contain max-h-[75vh]" />
+          </div>
+
+          <p class="text-white/60 text-xs mt-3">Tip: Click outside the image or press ESC to close.</p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        // ---- Load More (masonry) toggle ----
+        const toggleBtn = document.getElementById("toggleMoreWorkBtn");
+        const moreGrid = document.getElementById("moreWorkGrid");
+
+        if (toggleBtn && moreGrid) {
+          toggleBtn.addEventListener("click", function () {
+            const isHidden = moreGrid.classList.contains("lb-hidden");
+            if (isHidden) {
+              moreGrid.classList.remove("lb-hidden");
+              toggleBtn.innerHTML =
+                '<span class="material-symbols-outlined text-base">expand_less</span> Show Less';
+            } else {
+              moreGrid.classList.add("lb-hidden");
+              toggleBtn.innerHTML =
+                '<span class="material-symbols-outlined text-base">expand_more</span> Load More Photos';
+            }
+          });
+        }
+
+        // ---- Lightbox ----
+        const lightbox = document.getElementById("lightbox");
+        const backdrop = document.getElementById("lightboxBackdrop");
+        const img = document.getElementById("lightboxImg");
+        const caption = document.getElementById("lightboxCaption");
+        const closeBtn = document.getElementById("lightboxClose");
+
+        function openLightbox(src, cap) {
+          if (!lightbox || !img) return;
+          img.src = src;
+          caption.textContent = cap || "";
+          lightbox.classList.remove("lb-hidden");
+          document.body.style.overflow = "hidden";
+        }
+
+        function closeLightbox() {
+          if (!lightbox || !img) return;
+          lightbox.classList.add("lb-hidden");
+          img.src = "";
+          caption.textContent = "";
+          document.body.style.overflow = "";
+        }
+
+        document.addEventListener("click", function (e) {
+          const trigger = e.target.closest("[data-lightbox]");
+          if (!trigger) return;
+
+          const src = trigger.getAttribute("data-src");
+          const cap = trigger.getAttribute("data-caption") || "";
+          if (src) openLightbox(src, cap);
+        });
+
+        if (backdrop) backdrop.addEventListener("click", closeLightbox);
+        if (closeBtn) closeBtn.addEventListener("click", closeLightbox);
+
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape" && lightbox && !lightbox.classList.contains("lb-hidden")) {
+            closeLightbox();
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>
 
