@@ -1,9 +1,14 @@
+---
+permalink: /
+---
+
+
 <!DOCTYPE html>
 <html class="light" lang="en">
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>[Company Name] | Landscaping & Hardscaping in [City, State]</title>
+    <title>{{ site.company.name }} | Landscaping & Hardscaping in {{ site.company.city }}, {{ site.company.state }}</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap"
@@ -48,36 +53,8 @@
   </head>
 
   <body class="bg-background-light dark:bg-background-dark text-slate-custom dark:text-gray-100 font-display">
-    <header
-      class="sticky top-0 z-50 w-full bg-white/90 dark:bg-background-dark/90 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800"
-    >
-      <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-        <div class="flex items-center gap-2">
-          <div class="size-8 text-primary">
-            <svg fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z"
-              ></path>
-            </svg>
-          </div>
-          <span class="text-xl font-extrabold tracking-tight">[COMPANY NAME]</span>
-        </div>
+  {% include "header.njk" %}
 
-        <nav class="hidden md:flex items-center gap-8">
-          <a class="text-sm font-semibold hover:text-primary transition-colors" href="#services">Services</a>
-          <a class="text-sm font-semibold hover:text-primary transition-colors" href="#about">About</a>
-          <a class="text-sm font-semibold hover:text-primary transition-colors" href="#why-us">Why Us</a>
-          <a class="text-sm font-semibold hover:text-primary transition-colors" href="#process">Process</a>
-          <a
-            class="flex items-center gap-2 bg-primary text-background-dark px-5 py-2.5 rounded-lg font-bold hover:brightness-105 transition-all"
-            href="tel:8888888888"
-          >
-            <span class="material-symbols-outlined text-lg">call</span>
-            Call for a Free Estimate
-          </a>
-        </nav>
-      </div>
-    </header>
 
 <!-- HERO (with background image + heavy overlay) -->
 <section class="relative overflow-hidden pt-12 pb-20 px-6 lg:px-0">
@@ -103,7 +80,7 @@
           >Family-Owned. Premium Landscaping &amp; Outdoor Living.</span
         >
         <h1 class="text-5xl lg:text-7xl font-black leading-tight tracking-tight text-white">
-          Professional Landscaping in [City] That Makes Your Home Feel Like a
+          Professional Landscaping in {{ site.company.city }} That Makes Your Home Feel Like a
           <span class="text-primary">Resort</span>
         </h1>
         <p class="mt-6 text-lg text-white/80 max-w-lg leading-relaxed">
@@ -137,7 +114,8 @@
         >
         <a
           class="bg-white/10 border-2 border-white/20 text-white px-8 py-4 rounded-xl font-bold text-lg flex items-center gap-2 hover:bg-white/15 transition-all"
-          href="tel:8888888888"
+          href="tel:{{ site.company.phone_raw }}"
+
         >
           <span class="material-symbols-outlined">call</span> Call for Pricing
         </a>
@@ -408,11 +386,11 @@
 
             <div class="space-y-6 text-gray-600 dark:text-gray-400 leading-relaxed text-lg">
               <p>
-                [Company Name] was built on one simple promise: show up, do the work right, and leave every property better than we found it.
+                {{ site.company.name }} was built on one simple promise: show up, do the work right, and leave every property better than we found it.
                 From weekly maintenance to full outdoor transformations, we bring craftsmanship and clear communication to every job.
               </p>
               <p>
-                We know the soil, slopes, drainage issues, and seasonal swings that come with living in [City] and the surrounding areas.
+                We know the soil, slopes, drainage issues, and seasonal swings that come with living in {{ site.company.city }} and the surrounding areas.
                 That local experience helps us design landscapes that look great—and actually hold up.
               </p>
               <p>
@@ -426,7 +404,7 @@
                 <span class="text-xl font-bold italic text-slate-custom dark:text-white">
                   "We treat your property like it’s ours—clean work, clear timelines, and details that hold up."
                 </span>
-                <span class="text-primary font-bold mt-1">— [Owner Name], Owner</span>
+                <span class="text-primary font-bold mt-1">— {{ site.company.owner }}, Owner</span>
               </div>
             </div>
           </div>
@@ -443,7 +421,7 @@
             <div class="absolute -bottom-10 -left-10 w-60 h-60 bg-primary/10 rounded-full blur-3xl -z-0"></div>
             <div class="absolute bottom-6 right-6 bg-primary text-background-dark p-6 rounded-2xl shadow-xl z-20 hidden sm:block">
               <p class="text-3xl font-black leading-none">[X]+</p>
-              <p class="text-sm font-bold uppercase tracking-tighter">Years Serving [City]</p>
+              <p class="text-sm font-bold uppercase tracking-tighter">Years Serving {{ site.company.city }}</p>
             </div>
           </div>
         </div>
@@ -465,7 +443,7 @@
 
           <div class="space-y-10">
             <div>
-              <h2 class="text-4xl font-black mb-6">Why Homeowners Choose [Company Name]</h2>
+              <h2 class="text-4xl font-black mb-6">Why Homeowners Choose {{ site.company.name }}</h2>
               <p class="text-gray-600 dark:text-gray-400">
                 We build outdoor spaces that look better, function better, and stay that way—without missed appointments, sloppy crews, or vague pricing.
               </p>
@@ -477,7 +455,7 @@
                 <div>
                   <h4 class="font-bold mb-1">Local Know-How</h4>
                   <p class="text-sm text-gray-500">
-                    Designs that match [City] soil, slopes, and seasons—so your yard performs, not just looks good.
+                    Designs that match {{ site.company.city }} soil, slopes, and seasons—so your yard performs, not just looks good.
                   </p>
                 </div>
               </div>
@@ -597,7 +575,7 @@
       <div class="max-w-7xl mx-auto px-6">
         <div class="text-center mb-16">
           <h2 class="text-4xl font-black mb-4">Real Transformations. Real Results.</h2>
-          <p class="text-gray-400 italic">See the transformation of real homes in [City] and nearby areas.</p>
+          <p class="text-gray-400 italic">See the transformation of real homes in {{ site.company.city }} and nearby areas.</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
@@ -660,7 +638,7 @@
             </p>
             <div>
               <p class="font-black text-xl">[Customer Name]</p>
-              <p class="text-primary font-bold">[City], [State]</p>
+              <p class="text-primary font-bold">{{ site.company.city }}, {{ site.company.state }}</p>
             </div>
           </div>
         </div>
@@ -671,17 +649,16 @@
     <section class="py-24">
       <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         <div>
-          <h2 class="text-4xl font-black mb-8">Proudly Serving [City] &amp; Surrounding Areas</h2>
+          <h2 class="text-4xl font-black mb-8">Proudly Serving {{ site.company.city }} &amp; Surrounding Areas</h2>
           <div class="grid grid-cols-2 gap-y-4 gap-x-8">
-            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> [Suburb / Neighborhood 1]</div>
-            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> [Suburb / Neighborhood 2]</div>
-            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> [Suburb / Neighborhood 3]</div>
-            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> [Suburb / Neighborhood 4]</div>
-            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> [Suburb / Neighborhood 5]</div>
-            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> [Suburb / Neighborhood 6]</div>
-            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> [Suburb / Neighborhood 7]</div>
-            <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> [Suburb / Neighborhood 8]</div>
-          </div>
+  {% for area in site.company.areas_served %}
+    <div class="flex items-center gap-2">
+      <span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+      <span>{{ area }}</span>
+    </div>
+  {% endfor %}
+</div>
+
           <p class="mt-8 text-gray-500 italic">
             Not sure if you’re in our service area? Call or request an estimate—we’ll confirm fast.
           </p>
@@ -690,8 +667,8 @@
         <div class="h-96 bg-gray-200 dark:bg-gray-800 rounded-3xl overflow-hidden relative shadow-inner border border-gray-100 dark:border-gray-700">
           <div
             class="absolute inset-0 bg-cover bg-center grayscale hover:grayscale-0 transition-all"
-            data-alt="map of [City] highlighting service areas"
-            data-location="[City]"
+            data-alt="map of {{ site.company.city }} highlighting service areas"
+            data-location="{{ site.company.city }}"
             style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCg0P9zK47YM4kziIfIjC-5jI5etlaT2iMJAjwPAZJV7Y8Ir-f9A4iOO1-KHmbHmpgnKMWL9pBy5BgxfP4ayBtq7MyWyXg6ulVmuC5QzXSq5vEbYbSOtoYdzbmGxjiK7qRq20sZ8bSKl1aPnAobvoAYdsUyBvZ0UlW4bKpH0kT4U1ER_ddA2DENzTw21pxsULKim2eq7SJcB23K7WV400vmvv2ZNtMB5IZrawTKIASUj_F0GgNl6UsC2kMvwz_NJ4iEbLEv-mq3rNNT');"
           ></div>
           <div class="absolute inset-0 bg-primary/10 pointer-events-none"></div>
@@ -699,7 +676,7 @@
             class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white dark:bg-gray-900 px-6 py-4 rounded-xl shadow-xl border border-primary/30 flex items-center gap-3"
           >
             <span class="material-symbols-outlined text-primary fill-1">location_on</span>
-            <span class="font-black">Based in [City]</span>
+            <span class="font-black">Based in {{ site.company.city }}</span>
           </div>
         </div>
       </div>
@@ -723,11 +700,11 @@
 
           <details class="group bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden border border-gray-100 dark:border-gray-700">
             <summary class="flex justify-between items-center p-6 cursor-pointer font-bold list-none">
-              Are you licensed and insured in [State]?
+              Are you licensed and insured in {{ site.company.state }}?
               <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
             </summary>
             <div class="px-6 pb-6 text-sm text-gray-500 leading-relaxed">
-              Yes—[Company Name] is licensed (when required) and fully insured. We’re happy to provide proof of insurance upon request.
+              Yes—{{ site.company.name }} is licensed (when required) and fully insured. We’re happy to provide proof of insurance upon request.
             </div>
           </details>
 
@@ -776,9 +753,10 @@
           >
           <a
             class="bg-background-dark text-white px-10 py-5 rounded-2xl font-black text-xl flex items-center gap-3"
-            href="tel:8888888888"
+            href="tel:{{ site.company.phone_raw }}"
+
           >
-            <span class="material-symbols-outlined">call</span> Call [Phone Number]
+            <span class="material-symbols-outlined">call</span> Call {{ site.company.phone_display }}
           </a>
         </div>
 
@@ -791,28 +769,8 @@
       </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="bg-background-dark text-white py-16 px-6">
-      <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
-        <div class="flex items-center gap-2">
-          <div class="size-6 text-primary">
-            <svg fill="currentColor" viewBox="0 0 48 48">
-              <path
-                d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z"
-              ></path>
-            </svg>
-          </div>
-          <span class="text-lg font-extrabold tracking-tight">[COMPANY NAME]</span>
-        </div>
 
-        <div class="flex gap-8 text-sm text-gray-400">
-          <a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
-          <a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
-          <a class="hover:text-primary transition-colors" href="#">Employment</a>
-        </div>
+{% include "footer.njk" %}
 
-        <p class="text-xs text-gray-500">© [Year] [Company Name]. All rights reserved. Locally owned in [City, State].</p>
-      </div>
-    </footer>
   </body>
 </html>

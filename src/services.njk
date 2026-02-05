@@ -1,3 +1,8 @@
+---
+permalink: /services/
+---
+
+
 <!DOCTYPE html>
 <html class="light" lang="en">
   <head>
@@ -5,13 +10,12 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
     <!-- SEO: Title + Meta -->
-    <title>Landscaping Services in Indianapolis, IN | Design, Maintenance & Outdoor Upgrades</title>
+    <title>Landscaping Services in {{ site.company.city }}, {{ site.company.state }} | Design, Maintenance & Outdoor Upgrades</title>
     <meta
       name="description"
-      content="Full-service landscaping in Indianapolis, IN. From lawn care and seasonal cleanups to landscape design, drainage, planting, and hardscaping. Built for Indiana soil and weather. Free estimates."
+      content="Full-service landscaping in {{ site.company.city }}, {{ site.company.state }}. From lawn care and seasonal cleanups to landscape design, drainage, planting, and hardscaping. Built for {{ site.company.state }} soil and weather. Free estimates."
     />
     <!-- Optional (recommended for a template): update per client -->
-    <link rel="canonical" href="https://example.com/services" />
 
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link
@@ -57,123 +61,90 @@
       }
     </style>
 
-    <!-- SEO: Structured Data -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "LocalBusiness",
-            "name": "Indy Landscapers",
-            "url": "https://example.com",
-            "telephone": "+1-888-888-8888",
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Indianapolis",
-              "addressRegion": "IN",
-              "addressCountry": "US"
-            },
-            "areaServed": [
-              "Indianapolis, IN",
-              "Carmel, IN",
-              "Fishers, IN",
-              "Noblesville, IN",
-              "Greenwood, IN",
-              "Westfield, IN",
-              "Zionsville, IN",
-              "Lawrence, IN"
-            ]
-          },
-          {
-            "@type": "Service",
-            "serviceType": "Landscaping Services",
-            "areaServed": "Indianapolis, IN",
-            "provider": {
-              "@type": "LocalBusiness",
-              "name": "Indy Landscapers"
-            }
-          },
-          {
-            "@type": "FAQPage",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "What landscaping services do you offer in Indianapolis?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "We offer full-service landscaping in Indianapolis including lawn care, landscape design and installation, planting and mulching, seasonal cleanups, drainage solutions, hardscaping, and outdoor upgrades. Service availability can vary by season and property needs."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "How much do landscaping services cost?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Landscaping costs depend on the service and property size. Maintenance like mowing is typically priced weekly or bi-weekly, while design/install projects vary by scope, materials, and site conditions. We provide clear estimates after a quick consultation."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Do you provide landscape design and installation?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Yes. We can design and install landscape beds, shrubs, trees, and outdoor features. We plan around drainage, sunlight, soil type, and long-term maintenance so your landscape looks great and performs well in Indiana weather."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Can you fix drainage or pooling water in my yard?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Yes. Drainage issues often require grading, downspout extensions, drains, or other solutions depending on the cause. We evaluate water flow and recommend options that reduce pooling and protect your landscape and foundation."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "What areas do you serve around Indianapolis?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "We serve Indianapolis and nearby communities including Carmel, Fishers, Noblesville, Greenwood, Westfield, Zionsville, and Lawrence. If you’re not sure whether you’re in our service area, give us a call."
-                }
-              }
-            ]
-          }
-        ]
+<!-- SEO: Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "name": "{{ site.company.name }}",
+      "telephone": "+1{{ site.company.phone_raw }}",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "{{ site.company.city }}",
+        "addressRegion": "{{ site.company.state }}",
+        "addressCountry": "US"
+      },
+      "areaServed": [
+        {% for place in site.company.areas_served %}
+          "{{ place }}"{% if not loop.last %},{% endif %}
+        {% endfor %}
+      ]
+    },
+    {
+      "@type": "Service",
+      "serviceType": "Landscaping Services",
+      "areaServed": "{{ site.company.city }}, {{ site.company.state }}",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "{{ site.company.name }}"
       }
-    </script>
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What landscaping services do you offer in {{ site.company.city }}?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We offer full-service landscaping in {{ site.company.city }} including lawn care, landscape design and installation, planting and mulching, seasonal cleanups, drainage solutions, hardscaping, and outdoor upgrades. Service availability can vary by season and property needs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much do landscaping services cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Landscaping costs depend on the service and property size. Maintenance like mowing is typically priced weekly or bi-weekly, while design/install projects vary by scope, materials, and site conditions. We provide clear estimates after a quick consultation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you provide landscape design and installation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We can design and install landscape beds, shrubs, trees, and outdoor features. We plan around drainage, sunlight, soil type, and long-term maintenance so your landscape looks great and performs well in {{ site.company.state }} weather."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you fix drainage or pooling water in my yard?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Drainage issues often require grading, downspout extensions, drains, or other solutions depending on the cause. We evaluate water flow and recommend options that reduce pooling and protect your landscape and foundation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What areas do you serve around {{ site.company.city }}?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We serve {{ site.company.city }} and nearby communities including {% for place in site.company.areas_served %}{{ place }}{% if not loop.last %}, {% endif %}{% endfor %}. If you’re not sure whether you’re in our service area, give us a call."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
   </head>
 
   <body class="bg-background-light dark:bg-background-dark text-slate-custom dark:text-gray-100 font-display">
-    <header class="sticky top-0 z-50 w-full bg-white/90 dark:bg-background-dark/90 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800">
-      <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-        <div class="flex items-center gap-2">
-          <div class="size-8 text-primary">
-            <svg fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path
-                d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 44 36.7273 44Z"
-              ></path>
-            </svg>
-          </div>
-          <span class="text-xl font-extrabold tracking-tight">INDY LANDSCAPERS</span>
-        </div>
+    {% include "header.njk" %}
 
-        <nav class="hidden md:flex items-center gap-8">
-          <a class="text-sm font-semibold hover:text-primary transition-colors" href="#overview">Overview</a>
-          <a class="text-sm font-semibold hover:text-primary transition-colors" href="#services">Services</a>
-          <a class="text-sm font-semibold hover:text-primary transition-colors" href="#problems">Solutions</a>
-          <a class="text-sm font-semibold hover:text-primary transition-colors" href="#about">About</a>
-          <a class="text-sm font-semibold hover:text-primary transition-colors" href="#process">Process</a>
-          <a class="text-sm font-semibold hover:text-primary transition-colors" href="#faq">FAQs</a>
-          <a
-            class="flex items-center gap-2 bg-primary text-background-dark px-5 py-2.5 rounded-lg font-bold hover:brightness-105 transition-all"
-            href="tel:8888888888"
-          >
-            <span class="material-symbols-outlined text-lg">call</span>
-            888-888-8888
-          </a>
-        </nav>
-      </div>
-    </header>
 
     <!-- HERO -->
     <section class="relative overflow-hidden pt-12 pb-20 px-6 lg:px-0 bg-slate-50 dark:bg-background-dark">
@@ -181,11 +152,11 @@
         <div class="space-y-8">
           <div>
             <span class="inline-block py-1 px-3 bg-primary/20 text-primary text-xs font-bold uppercase tracking-widest rounded mb-4">
-              Built for Indiana Soil & Weather
+              Built for {{ site.company.state }} Soil & Weather
             </span>
 
             <h1 class="text-5xl lg:text-7xl font-black leading-tight tracking-tight dark:text-white">
-              Landscaping Services in <span class="text-primary">Indianapolis</span>
+              Landscaping Services in <span class="text-primary">{{site.company.city }}</span>
             </h1>
 
             <p class="mt-4 text-xl font-semibold text-gray-700 dark:text-gray-300">
@@ -193,7 +164,7 @@
             </p>
 
             <p class="mt-6 text-lg text-gray-600 dark:text-gray-400 max-w-lg leading-relaxed">
-              We provide full-service landscaping in Indianapolis—from weekly maintenance to complete outdoor transformations. Whether you need a clean, healthy lawn, fresh landscape beds, better drainage, or a new patio, we build a plan that fits your property and holds up through Indiana seasons.
+              We provide full-service landscaping in {{site.company.city }}—from weekly maintenance to complete outdoor transformations. Whether you need a clean, healthy lawn, fresh landscape beds, better drainage, or a new patio, we build a plan that fits your property and holds up through {{ site.company.state }} seasons.
             </p>
           </div>
 
@@ -219,7 +190,8 @@
             </a>
             <a
               class="bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 px-8 py-4 rounded-xl font-bold text-lg flex items-center gap-2"
-              href="tel:8888888888"
+              href="tel:{{ site.company.phone_raw }}"
+
             >
               <span class="material-symbols-outlined">call</span>
               Call Now
@@ -231,7 +203,7 @@
           <div class="absolute -inset-1 bg-gradient-to-r from-primary to-emerald-600 rounded-3xl blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
           <img
             class="relative rounded-3xl shadow-2xl w-full h-auto object-cover aspect-[4/3]"
-            alt="Beautiful landscaped backyard in Indianapolis, IN with clean lawn, planting beds, and patio area"
+            alt="Beautiful landscaped backyard in {{site.company.city }}, IN with clean lawn, planting beds, and patio area"
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnSNrORjCtEG_KgSjzSq4Ldh-JmRzzzGGKhJWlMPGAiMcSbZZlw6EgIaXZc_yuBced4HHjkd-ZGpVi2r6JJ5hJXQup2dAqqvNaN01tlKf-fHJ8BQftuXvCKUH9XTZVcGS-J0eFdgAJ4iSVzyg9affEEZnGRn7eG1_JaCwyJC1T0BMz_AOAZa8o3omgxscTeZouiLpXzlSRXHU8YhZsUIezsZGEDa8HgpGAb9UOTjTRlmejtQd3Ld0NzMFcgfyTLi41lgSrzofBn_bD"
           />
         </div>
@@ -250,7 +222,7 @@
             </p>
 
             <p class="text-lg text-gray-600 dark:text-gray-400">
-              Whether you need consistent lawn maintenance, a refresh with new plants and mulch, or a bigger upgrade like hardscaping or drainage work, we build a plan that fits your goals and your property. We design for Indiana soil conditions, sun exposure, and seasonal changes so your landscape lasts.
+              Whether you need consistent lawn maintenance, a refresh with new plants and mulch, or a bigger upgrade like hardscaping or drainage work, we build a plan that fits your goals and your property. We design for {{ site.company.state }} soil conditions, sun exposure, and seasonal changes so your landscape lasts.
             </p>
 
             <p class="text-lg text-gray-600 dark:text-gray-400">
@@ -280,7 +252,7 @@
           <div class="grid grid-cols-2 gap-4">
             <img
               class="rounded-2xl shadow-lg h-64 w-full object-cover"
-              alt="Fresh landscape planting beds with mulch and edging in Indianapolis, IN"
+              alt="Fresh landscape planting beds with mulch and edging in {{site.company.city }}, {{ site.company.state }}"
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuCki9OIk56gT2Y7mIJW0k9VHFupLZ4Kt52XwHtie0tk_OKcGmICOZxWSjR8GO82FBpA7ByCrUu6l-vDKVE47r4AoLuHiD7Ur5Wyn6aZ1A1JbfHD2Y0HUVdpbXL6TjwK5b5z8bIR0DZ0zXXOoKJTWYkxPxNJPyMlrH1NzQcqkQifN1zFr-Pz0H7Bs-x3UrQqXxu_F0Oi17faj0ASp8oB8wm9qODtcXzmG6YWdBmBYEzTDudOKtLiwKmMw63AH7wip98ePscB7p38xvqg"
             />
             <img
@@ -297,9 +269,9 @@
     <section class="py-24 bg-background-light dark:bg-background-dark/50" id="services">
       <div class="max-w-7xl mx-auto px-6">
         <div class="text-center mb-14">
-          <h2 class="text-4xl font-black mb-4">Our Landscaping Services in Indianapolis</h2>
+          <h2 class="text-4xl font-black mb-4">Our Landscaping Services in {{site.company.city }}</h2>
           <p class="text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-            One team for maintenance, upgrades, and outdoor transformations. We focus on clean results, smart planning, and long-term durability through Indiana seasons.
+            One team for maintenance, upgrades, and outdoor transformations. We focus on clean results, smart planning, and long-term durability through {{ site.company.state }} seasons.
           </p>
         </div>
 
@@ -420,11 +392,19 @@
 
             <div class="space-y-6 text-gray-600 dark:text-gray-400 leading-relaxed text-lg">
               <p>
-                We’re a locally owned Indianapolis landscaping team focused on craftsmanship and dependable results. From routine maintenance to full landscape renovations, we treat every property like it matters—because it does.
+                We’re a locally owned {{site.company.city }} landscaping team focused on craftsmanship and dependable results. From routine maintenance to full landscape renovations, we treat every property like it matters—because it does.
               </p>
-              <p>
-                We understand Indiana freeze-thaw cycles, clay-heavy soil, and how water moves around homes in Carmel, Fishers, and across Central Indiana. That experience helps us build landscapes that look great now and stay solid later.
-              </p>
+<p>
+  We understand {{ site.company.state }} weather patterns, local soil conditions, and how water moves around homes in {{ site.company.city }} and nearby communities
+  {% if site.company.areas_served and site.company.areas_served.length %}
+    including
+    {% for place in site.company.areas_served %}
+      {{ place }}{% if not loop.last %}, {% endif %}
+    {% endfor %}
+  {% endif %}.
+  That experience helps us build landscapes that look great now and stay solid later.
+</p>
+
               <p>
                 When you work with us, you get a straightforward process, clear communication, and a plan that fits your budget and goals.
               </p>
@@ -442,7 +422,7 @@
             <div class="relative z-10 rounded-3xl overflow-hidden shadow-2xl border-8 border-white dark:border-gray-800">
               <img
                 class="w-full h-auto object-cover aspect-[4/5]"
-                alt="Local landscaping business owner in Indianapolis standing in front of a well-maintained yard"
+                alt="Local landscaping business owner in {{site.company.city }} standing in front of a well-maintained yard"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBQDxvfo7K3Bq8Y3O-v9CLdDCHudnQVnhtGP0JWPazzOEExIAiZ3c5_UfSdHU-W4eTWyRTPXXtVWMWE9YuebTlNndgklJPCcO8XAhOszJ4zpIn0W_tdVpAs_c6zWEBzOxTkFQk5sWo8mgDr28HsGqcni8J26Fafdmx3G0yELArTA9ztYRnW8DV30He84kbxbwV6Zi2gaH_yQ0ZP-XdVAtaGC0l5cO5cXuShvId2e3b0HXcZWCKYL5HbxjjHnRoPUtOJdJtLle601Ub"
               />
             </div>
@@ -464,7 +444,7 @@
           <div class="relative">
             <img
               class="rounded-3xl shadow-2xl relative z-10"
-              alt="Landscaping crew performing professional outdoor maintenance in Indianapolis"
+              alt="Landscaping crew performing professional outdoor maintenance in {{site.company.city }}"
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuCX9mmODNMzC_oA2z1LjT5qN-jfrZ349y2P_s9jyuOwECt8XYHsgtt5f2YA8SjtwdvfFis3osiovwCZ2__tfH-IXKa25-Bb_9wuYJfauXbh7D6W83ckgSvLeR2dboSzN1UmDwB9XDBRCsYKEWuk98qO-xApyVnjugQ_PV0nHKgp_an3OUq0LGbzjz4q-lPCf8LHy66KKy5C2N3D3BlUXqzYwY62-ycelXy2EbKsE6pHTGKEuXYVWROWq21Npnt_WADDQNinfhpw7e9a"
             />
             <div class="absolute -bottom-6 -right-6 w-full h-full border-4 border-primary rounded-3xl -z-0"></div>
@@ -513,10 +493,14 @@
             </div>
 
             <div class="bg-white dark:bg-gray-800 rounded-2xl border border-gray-100 dark:border-gray-700 p-6">
-              <p class="font-bold mb-2">Serving Indianapolis &amp; Surrounding Areas</p>
+              <p class="font-bold mb-2">Serving {{site.company.city }} &amp; Surrounding Areas</p>
               <p class="text-sm text-gray-600 dark:text-gray-400">
-                We provide landscaping services in Indianapolis, Carmel, Fishers, Noblesville, Greenwood, Westfield, Zionsville, and Lawrence.
-              </p>
+  We provide landscaping services in
+  {% for area in site.company.areas_served %}
+    {{ area }}{% if not loop.last %},{% endif %}
+  {% endfor %}.
+</p>
+
             </div>
           </div>
         </div>
@@ -570,10 +554,20 @@
     <!-- LOCAL SERVICE AREA -->
     <section class="py-24 bg-gray-50 dark:bg-background-dark/50" id="service-area">
       <div class="max-w-7xl mx-auto px-6 text-center">
-        <h2 class="text-4xl font-black mb-6">Landscaping Services Throughout Central Indiana</h2>
-        <p class="text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-          We proudly serve Indianapolis and surrounding areas including Carmel, Fishers, Noblesville, Greenwood, Westfield, Zionsville, and Lawrence. Not sure if you’re in our service area? Call us and we’ll confirm.
-        </p>
+        <h2 class="text-4xl font-black mb-6">
+  Landscaping Services in {{ site.company.city }}, {{ site.company.state }} &amp; Nearby Areas
+</h2>
+<p class="text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+  We proudly serve {{ site.company.city }} and surrounding areas
+  {% if site.company.areas_served and site.company.areas_served.length %}
+    including
+    {% for place in site.company.areas_served %}
+      {{ place }}{% if not loop.last %}, {% endif %}
+    {% endfor %}
+  {% endif %}.
+  Not sure if you’re in our service area? Call us and we’ll confirm.
+</p>
+
       </div>
     </section>
 
@@ -630,11 +624,11 @@
         <div class="space-y-4">
           <details class="group bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden border border-gray-100 dark:border-gray-700">
             <summary class="flex justify-between items-center p-6 cursor-pointer font-bold list-none">
-              What landscaping services do you offer in Indianapolis?
+              What landscaping services do you offer in {{site.company.city }}?
               <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
             </summary>
             <div class="px-6 pb-6 text-sm text-gray-500 leading-relaxed">
-              We offer full-service landscaping in Indianapolis including lawn care, landscape design and installation, planting and mulching, seasonal cleanups, drainage solutions, hardscaping, and outdoor upgrades. Service availability can vary by season and property needs.
+              We offer full-service landscaping in {{site.company.city }} including lawn care, landscape design and installation, planting and mulching, seasonal cleanups, drainage solutions, hardscaping, and outdoor upgrades. Service availability can vary by season and property needs.
             </div>
           </details>
 
@@ -654,7 +648,7 @@
               <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
             </summary>
             <div class="px-6 pb-6 text-sm text-gray-500 leading-relaxed">
-              Yes. We can design and install landscape beds, shrubs, trees, and outdoor features. We plan around drainage, sunlight, soil type, and long-term maintenance so your landscape looks great and performs well in Indiana weather.
+              Yes. We can design and install landscape beds, shrubs, trees, and outdoor features. We plan around drainage, sunlight, soil type, and long-term maintenance so your landscape looks great and performs well in {{ site.company.state }} weather.
             </div>
           </details>
 
@@ -670,12 +664,17 @@
 
           <details class="group bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden border border-gray-100 dark:border-gray-700">
             <summary class="flex justify-between items-center p-6 cursor-pointer font-bold list-none">
-              What areas do you serve around Indianapolis?
+              What areas do you serve around {{site.company.city }}?
               <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
             </summary>
-            <div class="px-6 pb-6 text-sm text-gray-500 leading-relaxed">
-              We serve Indianapolis and nearby communities including Carmel, Fishers, Noblesville, Greenwood, Westfield, Zionsville, and Lawrence. If you’re not sure whether you’re in our service area, give us a call.
-            </div>
+<div class="px-6 pb-6 text-sm text-gray-500 leading-relaxed">
+  We serve {{ site.company.city }} and nearby communities including
+  {% for area in site.company.areas_served %}
+    {{ area }}{% if not loop.last %},{% endif %}
+  {% endfor %}.
+  If you’re not sure whether you’re in our service area, give us a call.
+</div>
+
           </details>
         </div>
       </div>
@@ -693,14 +692,15 @@
 
             <div class="space-y-4">
               <div class="flex flex-wrap gap-6">
-                <a class="flex items-center gap-4 bg-background-dark text-white px-8 py-5 rounded-2xl font-black text-xl" href="tel:8888888888">
+                <a class="flex items-center gap-4 bg-background-dark text-white px-8 py-5 rounded-2xl font-black text-xl" href="tel:{{ site.company.phone_raw }}"
+>
                   <span class="material-symbols-outlined">call</span>
-                  888-888-8888
+                  {{ site.company.phone_display }}
                 </a>
               </div>
 
               <p class="text-sm text-gray-600 dark:text-gray-400">
-                Prefer text? Call and ask about a quick landscaping consultation in Indianapolis.
+                Prefer text? Call and ask about a quick landscaping consultation in {{ site.company.city }}.
               </p>
             </div>
           </div>
@@ -773,31 +773,8 @@
       </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="bg-background-dark text-white py-16 px-6">
-      <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
-        <div class="flex items-center gap-2">
-          <div class="size-6 text-primary">
-            <svg fill="currentColor" viewBox="0 0 48 48" aria-hidden="true">
-              <path
-                d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 44 36.7273 44Z"
-              ></path>
-            </svg>
-          </div>
-          <span class="text-lg font-extrabold tracking-tight">INDY LANDSCAPERS</span>
-        </div>
+{% include "header.njk" %}
 
-        <div class="flex gap-8 text-sm text-gray-400">
-          <a class="hover:text-primary transition-colors" href="/privacy-policy">Privacy Policy</a>
-          <a class="hover:text-primary transition-colors" href="/terms-of-service">Terms of Service</a>
-          <a class="hover:text-primary transition-colors" href="/services">Services</a>
-        </div>
-
-        <p class="text-xs text-gray-500">
-          © 2024 Indy Landscapers. All rights reserved. Locally owned in Indianapolis, IN.
-        </p>
-      </div>
-    </footer>
   </body>
 </html>
 

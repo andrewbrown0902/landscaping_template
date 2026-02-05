@@ -1,8 +1,13 @@
+---
+permalink: /contact/
+---
+
+
 <!DOCTYPE html>
 <html class="light" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Indy Landscapers | Get Your Free Quote</title>
+<title>{{ site.company.name }} | Get Your Free Quote</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
@@ -42,30 +47,8 @@
     </style>
 </head>
 <body class="bg-background-light dark:bg-background-dark text-[#0d1b12] dark:text-white transition-colors duration-300">
-<header class="border-b border-solid border-[#e7f3eb] dark:border-[#1a3321] bg-background-light dark:bg-background-dark px-6 md:px-20 py-4">
-<div class="max-w-[1280px] mx-auto flex items-center justify-between">
-<div class="flex items-center gap-3">
-<div class="size-8 text-primary">
-<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-<path d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z" fill="currentColor"></path>
-</svg>
-</div>
-<h2 class="text-xl font-extrabold tracking-tight">Indy Landscapers</h2>
-</div>
-<nav class="hidden md:flex items-center gap-8">
-<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Portfolio</a>
-<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Services</a>
-<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">About</a>
-<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Testimonials</a>
-<button class="bg-primary hover:bg-primary/90 text-[#0d1b12] px-5 py-2 rounded-lg font-bold text-sm transition-all shadow-sm">
-                Get a Quote
-            </button>
-</nav>
-<button class="md:hidden p-2">
-<span class="material-symbols-outlined">menu</span>
-</button>
-</div>
-</header>
+{% include "header.njk" %}
+
 <main>
 <section class="bg-[#eef5f0] dark:bg-[#0c1a11] py-16 md:py-24">
 <div class="max-w-[1280px] mx-auto px-6 text-center">
@@ -73,7 +56,7 @@
                 Get Your Free Quote
             </h1>
 <p class="text-lg md:text-xl font-medium text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-                Transform your outdoor space with Indianapolis's premier landscaping team. No-obligation estimates and expert response within 24 hours.
+                Transform your outdoor space with {{ site.company.city }}'s premier landscaping team. No-obligation estimates and expert response within 24 hours.
             </p>
 </div>
 </section>
@@ -128,7 +111,8 @@
 </div>
 <div>
 <p class="text-sm font-bold uppercase tracking-widest text-gray-500 mb-1">Call Anytime</p>
-<a class="text-2xl font-extrabold hover:text-primary transition-colors" href="tel:8888888888">(888) 888-8888</a>
+<a class="text-2xl font-extrabold hover:text-primary transition-colors" href="tel:{{ site.company.phone_raw }}">{{ site.company.phone_display }}
+</a>
 </div>
 </div>
 <div class="flex items-start gap-5">
@@ -137,7 +121,7 @@
 </div>
 <div>
 <p class="text-sm font-bold uppercase tracking-widest text-gray-500 mb-1">Email Us</p>
-<a class="text-2xl font-extrabold hover:text-primary transition-colors" href="mailto:hello@indylandscapers.com">hello@indylandscapers.com</a>
+<a class="text-2xl font-extrabold hover:text-primary transition-colors" href="mailto:{{ site.company.email }}">{{ site.company.email }}</a>
 </div>
 </div>
 <div class="flex items-start gap-5">
@@ -189,14 +173,14 @@
 <div class="relative z-10 text-center px-4">
 <div class="inline-flex items-center gap-2 bg-white dark:bg-[#1a3321] px-6 py-3 rounded-full shadow-lg mb-4">
 <span class="material-symbols-outlined text-red-500">location_on</span>
-<span class="font-bold">Serving All of Indianapolis &amp; Surrounding Areas</span>
+<span class="font-bold">Serving All of {{ site.company.city }} &amp; Surrounding Areas</span>
 </div>
 <div class="flex flex-wrap justify-center gap-3 mt-4">
-<span class="px-4 py-1 bg-white/80 dark:bg-[#1a3321]/80 rounded-full text-xs font-bold">Carmel</span>
-<span class="px-4 py-1 bg-white/80 dark:bg-[#1a3321]/80 rounded-full text-xs font-bold">Fishers</span>
-<span class="px-4 py-1 bg-white/80 dark:bg-[#1a3321]/80 rounded-full text-xs font-bold">Zionsville</span>
-<span class="px-4 py-1 bg-white/80 dark:bg-[#1a3321]/80 rounded-full text-xs font-bold">Noblesville</span>
-<span class="px-4 py-1 bg-white/80 dark:bg-[#1a3321]/80 rounded-full text-xs font-bold">Geist</span>
+  {% for area in site.company.areas_served %}
+    <span class="px-4 py-1 bg-white/80 dark:bg-[#1a3321]/80 rounded-full text-xs font-bold">
+      {{ area | replace(", IN", "") | replace(", OH", "") }}
+    </span>
+  {% endfor %}
 </div>
 </div>
 </div>
@@ -206,61 +190,8 @@
 </div>
 </section>
 </main>
-<footer class="bg-background-light dark:bg-[#0a160e] py-12 border-t border-[#e7f3eb] dark:border-[#1a3321]">
-<div class="max-w-[1280px] mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
-<div class="col-span-1 md:col-span-1">
-<div class="flex items-center gap-3 mb-6">
-<div class="size-6 text-primary">
-<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-<path d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z" fill="currentColor"></path>
-</svg>
-</div>
-<h2 class="text-lg font-extrabold">Indy Landscapers</h2>
-</div>
-<p class="text-sm text-gray-500 dark:text-gray-400 mb-6">
-                Premium outdoor living solutions for the modern Indiana home. Excellence in design, quality in craftsmanship.
-            </p>
-</div>
-<div>
-<h4 class="font-bold mb-6 text-sm uppercase tracking-widest text-primary">Services</h4>
-<ul class="space-y-4 text-sm text-gray-500 dark:text-gray-400">
-<li><a class="hover:text-primary transition-colors" href="#">Hardscaping</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Softscaping</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Landscape Lighting</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Pool Design</a></li>
-</ul>
-</div>
-<div>
-<h4 class="font-bold mb-6 text-sm uppercase tracking-widest text-primary">Company</h4>
-<ul class="space-y-4 text-sm text-gray-500 dark:text-gray-400">
-<li><a class="hover:text-primary transition-colors" href="#">About Us</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Our Process</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Contact</a></li>
-</ul>
-</div>
-<div>
-<h4 class="font-bold mb-6 text-sm uppercase tracking-widest text-primary">Connect</h4>
-<div class="flex gap-4">
-<a class="size-10 rounded-lg bg-[#e7f3eb] dark:bg-[#1a3321] flex items-center justify-center hover:bg-primary hover:text-white transition-all" href="#">
-<span class="material-symbols-outlined">public</span>
-</a>
-<a class="size-10 rounded-lg bg-[#e7f3eb] dark:bg-[#1a3321] flex items-center justify-center hover:bg-primary hover:text-white transition-all" href="#">
-<span class="material-symbols-outlined">camera</span>
-</a>
-<a class="size-10 rounded-lg bg-[#e7f3eb] dark:bg-[#1a3321] flex items-center justify-center hover:bg-primary hover:text-white transition-all" href="#">
-<span class="material-symbols-outlined">alternate_email</span>
-</a>
-</div>
-</div>
-</div>
-<div class="max-w-[1280px] mx-auto px-6 mt-12 pt-8 border-t border-[#e7f3eb] dark:border-[#1a3321] text-xs text-gray-500 dark:text-gray-600 flex flex-col md:flex-row justify-between items-center gap-4">
-<p>© 2024 Indy Landscapers. All rights reserved.</p>
-<div class="flex gap-6">
-<a class="hover:text-primary" href="#">Privacy Policy</a>
-<a class="hover:text-primary" href="#">Terms of Service</a>
-</div>
-</div>
-</footer>
+
+{% include "header.njk" %}
+
 
 </body></html>

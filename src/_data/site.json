@@ -1,0 +1,25 @@
+{
+  "company": {
+    "name": "Indy Landscapers",
+    "owner": "John Doe",
+    "phone_display": "(123) 456-7890",
+    "phone_raw": "11234567890",
+    "email": "info@indylandscapers.com",
+    "city": "Indianapolis",
+    "state": "Indiana",
+    "areas_served": [
+      "Indianapolis, IN",
+      "Carmel, IN",
+      "Fishers, IN",
+      "Noblesville, IN",
+      "Greenwood, IN",
+      "Westfield, IN",
+      "Zionsville, IN",
+      "Lawrence, IN"
+    ]
+  },
+  "legal": {
+    "year": "2026"
+  }
+}
+
