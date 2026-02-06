@@ -1,22 +1,16 @@
+---
+permalink: /gallery/
+---
+
+
 <!DOCTYPE html>
 <html class="light" lang="en">
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>[Company Name] | Project Gallery</title>
+    <title>{{ site.company.name }} | Project Gallery</title>
 
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap"
-      rel="stylesheet"
-    />
-
-    <script id="tailwind-config">
+        <script id="tailwind-config">
       tailwind.config = {
         darkMode: "class",
         theme: {
@@ -39,6 +33,17 @@
         },
       };
     </script>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
 
     <style>
       .material-symbols-outlined {
@@ -82,7 +87,7 @@
           </span>
           <h1 class="text-4xl md:text-6xl font-black mb-6 tracking-tight leading-[1.1]">Project Gallery</h1>
           <p class="text-lg md:text-xl font-medium text-white/90 mb-8 max-w-2xl mx-auto">
-            A few recent outdoor upgrades across the [City] area—built with clean details, durable materials, and a focus on curb appeal.
+            A few recent outdoor upgrades across the {{ site.company.city }} area—built with clean details, durable materials, and a focus on curb appeal.
           </p>
           <div class="flex flex-wrap justify-center gap-4">
             <a class="bg-primary text-[#0d1b12] px-8 py-3 rounded-lg font-bold text-base hover:scale-105 transition-transform" href="#projects">
@@ -123,7 +128,7 @@
                     href="tel:{{ site.company.phone_raw }}"
 
                   >
-                    Call [Phone Number]
+                    Call {{ site.company.phone_display }}
                   </a>
                 </div>
               </div>
@@ -144,7 +149,7 @@
                   <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">
                     <span class="inline-flex items-center">
                       <span class="material-symbols-outlined text-base mr-1">location_on</span>
-                      [Location], [State]
+                      [Location], {{ site.company.state }}
                     </span>
                   </p>
                 </div>
@@ -203,7 +208,7 @@
                   <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">
                     <span class="inline-flex items-center">
                       <span class="material-symbols-outlined text-base mr-1">location_on</span>
-                      [Location], [State]
+                      [Location], {{ site.company.state }}
                     </span>
                   </p>
                 </div>
@@ -262,7 +267,7 @@
                   <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">
                     <span class="inline-flex items-center">
                       <span class="material-symbols-outlined text-base mr-1">location_on</span>
-                      [Location], [State]
+                      [Location], {{ site.company.state }}
                     </span>
                   </p>
                 </div>
@@ -532,7 +537,7 @@
               <a class="border-2 border-white/20 hover:border-white text-white px-8 py-4 rounded-lg font-black text-lg flex items-center justify-center transition-all group" href="tel:{{ site.company.phone_raw }}"
 >
                 <span class="material-symbols-outlined mr-2 group-hover:scale-110 transition-transform">call</span>
-                [Phone Number]
+                {{ site.company.phone_display }}
               </a>
             </div>
           </div>
@@ -635,7 +640,8 @@
         });
       })();
     </script>
-    {% include "header.njk" %}
+{% include "footer.njk" %}
+
 
   </body>
 </html>

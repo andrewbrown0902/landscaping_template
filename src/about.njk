@@ -1,13 +1,14 @@
+---
+permalink: /about/
+---
+
+
 <!DOCTYPE html>
 
 <html class="light" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>About Us | Indy Landscapers</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<title>About Us | {{ site.company.name }}</title>
 <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -28,6 +29,10 @@
             },
         }
     </script>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
@@ -40,10 +45,10 @@
 <main>
 <!-- Intro / Mission Hero Section -->
 <section class="relative h-[600px] flex items-center justify-center overflow-hidden">
-<div class="absolute inset-0 bg-cover bg-center" data-alt="Stunning aerial view of a luxury Indianapolis estate landscape" style="background-image: linear-gradient(rgba(16, 34, 22, 0.7), rgba(16, 34, 22, 0.5)), url('https://lh3.googleusercontent.com/aida-public/AB6AXuAAn2XjfyerApOtZElGkp1U8X1HVtRnpSdFHM0qvjN153j51uZ4LpG-SsWE35v9G99COqeDjVVMMNDf1XsTHKBAV9nV2rVvqszyoWGuvTzIsYxMPNa3bMm3IiNIE8Kyt5ccmArmxmodUXFIhCv6btBLl-qoK_38J9DhBzk3XyO3ILo6TVqgQYM7mdMKpStKKho3SaaJWr1D4G1pzVRnW6mDdwtBDIz0lhKLaLYQ_ZwjHzmxcyzFLuFoK1SCpJKs1mefCDte0dlxb35K');"></div>
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Stunning aerial view of a luxury {{ site.company.city }} estate landscape" style="background-image: linear-gradient(rgba(16, 34, 22, 0.7), rgba(16, 34, 22, 0.5)), url('https://lh3.googleusercontent.com/aida-public/AB6AXuAAn2XjfyerApOtZElGkp1U8X1HVtRnpSdFHM0qvjN153j51uZ4LpG-SsWE35v9G99COqeDjVVMMNDf1XsTHKBAV9nV2rVvqszyoWGuvTzIsYxMPNa3bMm3IiNIE8Kyt5ccmArmxmodUXFIhCv6btBLl-qoK_38J9DhBzk3XyO3ILo6TVqgQYM7mdMKpStKKho3SaaJWr1D4G1pzVRnW6mDdwtBDIz0lhKLaLYQ_ZwjHzmxcyzFLuFoK1SCpJKs1mefCDte0dlxb35K');"></div>
 <div class="relative z-10 text-center px-6 max-w-4xl">
 <h1 class="text-white text-5xl md:text-7xl font-extrabold tracking-tighter leading-tight mb-6">
-                    Rooted in Indianapolis: <br/><span class="text-primary">Our Mission</span>
+                    Rooted in {{ site.company.city }}: <br/><span class="text-primary">Our Mission</span>
 </h1>
 <p class="text-white/90 text-lg md:text-xl font-medium leading-relaxed mb-10 max-w-2xl mx-auto">
                     We stand for quality, integrity, and serving homeowners who value their outdoor living space with premium, tailored landscaping solutions.
@@ -60,7 +65,7 @@
 <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">Our Story: From Passion to Elite Craftsmanship</h2>
 <div class="w-20 h-1.5 bg-primary rounded-full"></div>
 <p class="text-lg text-slate-accent dark:text-slate-300 leading-relaxed">
-                        Indy Landscapers began as a humble local operation fueled by a simple passion for the Indiana outdoors. What started as mowing lawns for neighbors has blossomed into an elite landscaping firm recognized for artistic vision and technical precision.
+                        {{ site.company.name }} began as a humble local operation fueled by a simple passion for the {{ site.company.state }} outdoors. What started as mowing lawns for neighbors has blossomed into an elite landscaping firm recognized for artistic vision and technical precision.
                     </p>
 <p class="text-lg text-slate-accent dark:text-slate-300 leading-relaxed">
                         Unlike massive corporations where you're just another ticket number, we maintain a boutique approach. Every yard we touch is treated as our own masterpiece, ensuring that your specific vision and the local soil's needs are perfectly harmonized.
@@ -82,7 +87,7 @@
 <div class="max-w-7xl mx-auto px-6 lg:px-10">
 <div class="text-center mb-16">
 <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-4">Our Core Values</h2>
-<p class="text-slate-accent dark:text-slate-400 max-w-2xl mx-auto">How we differentiate ourselves in the Indiana landscape industry.</p>
+<p class="text-slate-accent dark:text-slate-400 max-w-2xl mx-auto">How we differentiate ourselves in the {{ site.company.state }} landscape industry.</p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 <!-- Value 1 -->
@@ -107,7 +112,7 @@
 <span class="material-symbols-outlined text-3xl">map</span>
 </div>
 <h3 class="text-xl font-bold mb-3">Local Stewardship</h3>
-<p class="text-sm text-slate-accent dark:text-slate-400">Deep understanding of Indiana soil and our unique climate ensures your landscape thrives for years.</p>
+<p class="text-sm text-slate-accent dark:text-slate-400">Deep understanding of {{ site.company.state }} soil and our unique climate ensures your landscape thrives for years.</p>
 </div>
 <!-- Value 4 -->
 <div class="bg-white dark:bg-background-dark p-8 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 flex flex-col items-center text-center">
@@ -165,6 +170,7 @@
 </div>
 </section>
 </main>
-{% include "header.njk" %}
+{% include "footer.njk" %}
+
 
 </body></html>
